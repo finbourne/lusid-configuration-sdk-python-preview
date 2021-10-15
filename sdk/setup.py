@@ -41,19 +41,19 @@ REQUIRES = [
 ]
 
 version = {}
-with open("./lusid_scheduler/__version__.py") as fp:
+with open("./lusid_configuration/__version__.py") as fp:
     exec(fp.read(), version)
 
 setup(
 
-    name='lusid-scheduler-sdk-preview',
+    name='lusid-configuration-sdk-preview',
     version=version['__version__'],
-    description='Python Preview SDK for Scheduler API',
-    url='https://github.com/finbourne/lusid-scheduler-sdk-python-preview',
+    description='Python Preview SDK for Configuration API',
+    url='https://github.com/finbourne/lusid-configuration-sdk-python-preview',
     author='FINBOURNE Technology',
     author_email='engineering@finbourne.com',
     license='MIT',
-    keywords=["OpenAPI", "FINBOURNE", "LUSID", "Notifications API"],
+    keywords=["OpenAPI", "FINBOURNE", "LUSID", "Configuration API"],
     install_requires=REQUIRES,
     packages=find_packages(exclude=['tests*']),
     include_package_data=True
