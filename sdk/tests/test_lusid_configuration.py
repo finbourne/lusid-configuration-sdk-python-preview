@@ -20,7 +20,7 @@ class LusidConfigurationTests(unittest.TestCase):
 
     def test_get_types(self):
 
-        response = self.api.list_sets().values
+        response = self.api.list_configuration_sets().values
         self.assertGreaterEqual(len(response), 0, response)
 
 
