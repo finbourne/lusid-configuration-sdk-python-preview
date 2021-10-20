@@ -3,6 +3,10 @@ This is the Python Preview SDK for the Configuration API for [LUSID by FINBOURNE
 
 <a href="https://www.lusid.com/app/signup"><img src="https://content.finbourne.com/LUSID_repo.png" alt="LUSID_by_Finbourne"></a>
 
+| branch | status |
+| --- | --- |
+| `master` |  ![PyPI](https://img.shields.io/pypi/v/lusid-configuration-sdk-preview?color=blue)
+
 ## Installation
 
 The PyPi package for the LUSID Configuration SDK can installed using the following:
