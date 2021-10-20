@@ -9,7 +9,7 @@ This is the Python Preview SDK for the Configuration API for [LUSID by FINBOURNE
 
 ## Installation
 
-The PyPi package for the LUSID Configuration SDK can installed using the following:
+The PyPi package for the LUSID Configuration Preview SDK can installed using the following:
 
 ```
 pip install lusid-configuration-sdk-preview finbourne-sdk-utilities
