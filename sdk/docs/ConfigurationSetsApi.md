@@ -1,4 +1,4 @@
-# lusid.ConfigurationSetsApi
+# lusid_configuration.ConfigurationSetsApi
 
 All URIs are relative to *https://fbn-ci.lusid.com/configuration*
 
@@ -28,12 +28,12 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import lusid
-from lusid.rest import ApiException
+import lusid_configuration
+from lusid_configuration.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://fbn-ci.lusid.com/configuration
 # See configuration.py for a list of all supported configuration parameters.
-configuration = lusid.Configuration(
+configuration = lusid_configuration.Configuration(
     host = "https://fbn-ci.lusid.com/configuration"
 )
 
@@ -43,15 +43,15 @@ configuration = lusid.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: oauth2
-configuration = lusid.Configuration(
+configuration = lusid_configuration.Configuration(
     host = "https://fbn-ci.lusid.com/configuration"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Enter a context with an instance of the API client
-with lusid.ApiClient(configuration) as api_client:
+with lusid_configuration.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = lusid.ConfigurationSetsApi(api_client)
+    api_instance = lusid_configuration.ConfigurationSetsApi(api_client)
     type = 'type_example' # str | Whether the configuration set is Personal or Shared
 scope = 'scope_example' # str | The scope that identifies a configuration set
 code = 'code_example' # str | The code that identifies a configuration set
@@ -110,12 +110,12 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import lusid
-from lusid.rest import ApiException
+import lusid_configuration
+from lusid_configuration.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://fbn-ci.lusid.com/configuration
 # See configuration.py for a list of all supported configuration parameters.
-configuration = lusid.Configuration(
+configuration = lusid_configuration.Configuration(
     host = "https://fbn-ci.lusid.com/configuration"
 )
 
@@ -125,15 +125,15 @@ configuration = lusid.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: oauth2
-configuration = lusid.Configuration(
+configuration = lusid_configuration.Configuration(
     host = "https://fbn-ci.lusid.com/configuration"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Enter a context with an instance of the API client
-with lusid.ApiClient(configuration) as api_client:
+with lusid_configuration.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = lusid.ConfigurationSetsApi(api_client)
+    api_instance = lusid_configuration.ConfigurationSetsApi(api_client)
     create_configuration_set = {"id":{"scope":"official","code":"system-a-config"},"type":"shared","description":"All the config related to System A"} # CreateConfigurationSet | The data to create a configuration set
 user_id = 'user_id_example' # str | Feature that allows Administrators to administer personal settings  (but never reveal the value of secrets) of a specific user. (optional)
 
@@ -185,12 +185,12 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import lusid
-from lusid.rest import ApiException
+import lusid_configuration
+from lusid_configuration.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://fbn-ci.lusid.com/configuration
 # See configuration.py for a list of all supported configuration parameters.
-configuration = lusid.Configuration(
+configuration = lusid_configuration.Configuration(
     host = "https://fbn-ci.lusid.com/configuration"
 )
 
@@ -200,15 +200,15 @@ configuration = lusid.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: oauth2
-configuration = lusid.Configuration(
+configuration = lusid_configuration.Configuration(
     host = "https://fbn-ci.lusid.com/configuration"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Enter a context with an instance of the API client
-with lusid.ApiClient(configuration) as api_client:
+with lusid_configuration.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = lusid.ConfigurationSetsApi(api_client)
+    api_instance = lusid_configuration.ConfigurationSetsApi(api_client)
     
     try:
         # [EXPERIMENTAL] DeleteAccessToken: Delete any stored Personal Access Token for the current user
@@ -252,12 +252,12 @@ void (empty response body)
 ```python
 from __future__ import print_function
 import time
-import lusid
-from lusid.rest import ApiException
+import lusid_configuration
+from lusid_configuration.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://fbn-ci.lusid.com/configuration
 # See configuration.py for a list of all supported configuration parameters.
-configuration = lusid.Configuration(
+configuration = lusid_configuration.Configuration(
     host = "https://fbn-ci.lusid.com/configuration"
 )
 
@@ -267,15 +267,15 @@ configuration = lusid.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: oauth2
-configuration = lusid.Configuration(
+configuration = lusid_configuration.Configuration(
     host = "https://fbn-ci.lusid.com/configuration"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Enter a context with an instance of the API client
-with lusid.ApiClient(configuration) as api_client:
+with lusid_configuration.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = lusid.ConfigurationSetsApi(api_client)
+    api_instance = lusid_configuration.ConfigurationSetsApi(api_client)
     type = 'type_example' # str | Whether the configuration set is Personal or Shared
 scope = 'scope_example' # str | The scope that identifies a configuration set
 code = 'code_example' # str | The code that identifies a configuration set
@@ -333,12 +333,12 @@ void (empty response body)
 ```python
 from __future__ import print_function
 import time
-import lusid
-from lusid.rest import ApiException
+import lusid_configuration
+from lusid_configuration.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://fbn-ci.lusid.com/configuration
 # See configuration.py for a list of all supported configuration parameters.
-configuration = lusid.Configuration(
+configuration = lusid_configuration.Configuration(
     host = "https://fbn-ci.lusid.com/configuration"
 )
 
@@ -348,15 +348,15 @@ configuration = lusid.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: oauth2
-configuration = lusid.Configuration(
+configuration = lusid_configuration.Configuration(
     host = "https://fbn-ci.lusid.com/configuration"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Enter a context with an instance of the API client
-with lusid.ApiClient(configuration) as api_client:
+with lusid_configuration.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = lusid.ConfigurationSetsApi(api_client)
+    api_instance = lusid_configuration.ConfigurationSetsApi(api_client)
     type = 'type_example' # str | Whether the configuration set is Personal or Shared
 scope = 'scope_example' # str | The scope that identifies a configuration set
 code = 'code_example' # str | The code that identifies a configuration set
@@ -412,12 +412,12 @@ void (empty response body)
 ```python
 from __future__ import print_function
 import time
-import lusid
-from lusid.rest import ApiException
+import lusid_configuration
+from lusid_configuration.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://fbn-ci.lusid.com/configuration
 # See configuration.py for a list of all supported configuration parameters.
-configuration = lusid.Configuration(
+configuration = lusid_configuration.Configuration(
     host = "https://fbn-ci.lusid.com/configuration"
 )
 
@@ -427,15 +427,15 @@ configuration = lusid.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: oauth2
-configuration = lusid.Configuration(
+configuration = lusid_configuration.Configuration(
     host = "https://fbn-ci.lusid.com/configuration"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Enter a context with an instance of the API client
-with lusid.ApiClient(configuration) as api_client:
+with lusid_configuration.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = lusid.ConfigurationSetsApi(api_client)
+    api_instance = lusid_configuration.ConfigurationSetsApi(api_client)
     action = 'action_example' # str | action=regenerate = Even if an existing parameter exists, forcibly regenerate a new one (deleting the old)  action=ensure = If no parameter exists, create one. If one does already exist, verify that it is still valid (call a service?), and if so, return it. If it is not still valid, then regenerate a new one.  action=default = If a parameter exists, return it. If not then create one. If this parameter is not provided, this is the default behaviour. (optional)
 
     try:
@@ -485,12 +485,12 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import lusid
-from lusid.rest import ApiException
+import lusid_configuration
+from lusid_configuration.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://fbn-ci.lusid.com/configuration
 # See configuration.py for a list of all supported configuration parameters.
-configuration = lusid.Configuration(
+configuration = lusid_configuration.Configuration(
     host = "https://fbn-ci.lusid.com/configuration"
 )
 
@@ -500,15 +500,15 @@ configuration = lusid.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: oauth2
-configuration = lusid.Configuration(
+configuration = lusid_configuration.Configuration(
     host = "https://fbn-ci.lusid.com/configuration"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Enter a context with an instance of the API client
-with lusid.ApiClient(configuration) as api_client:
+with lusid_configuration.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = lusid.ConfigurationSetsApi(api_client)
+    api_instance = lusid_configuration.ConfigurationSetsApi(api_client)
     type = 'type_example' # str | Whether the configuration set is Personal or Shared
 scope = 'scope_example' # str | The scope that identifies a configuration set
 code = 'code_example' # str | The code that identifies a configuration set
@@ -569,12 +569,12 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import lusid
-from lusid.rest import ApiException
+import lusid_configuration
+from lusid_configuration.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://fbn-ci.lusid.com/configuration
 # See configuration.py for a list of all supported configuration parameters.
-configuration = lusid.Configuration(
+configuration = lusid_configuration.Configuration(
     host = "https://fbn-ci.lusid.com/configuration"
 )
 
@@ -584,15 +584,15 @@ configuration = lusid.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: oauth2
-configuration = lusid.Configuration(
+configuration = lusid_configuration.Configuration(
     host = "https://fbn-ci.lusid.com/configuration"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Enter a context with an instance of the API client
-with lusid.ApiClient(configuration) as api_client:
+with lusid_configuration.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = lusid.ConfigurationSetsApi(api_client)
+    api_instance = lusid_configuration.ConfigurationSetsApi(api_client)
     type = 'type_example' # str | Whether the configuration set is Personal or Shared
 scope = 'scope_example' # str | The scope that identifies a configuration set
 code = 'code_example' # str | The code that identifies a configuration set
@@ -651,12 +651,12 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import lusid
-from lusid.rest import ApiException
+import lusid_configuration
+from lusid_configuration.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://fbn-ci.lusid.com/configuration
 # See configuration.py for a list of all supported configuration parameters.
-configuration = lusid.Configuration(
+configuration = lusid_configuration.Configuration(
     host = "https://fbn-ci.lusid.com/configuration"
 )
 
@@ -666,15 +666,15 @@ configuration = lusid.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: oauth2
-configuration = lusid.Configuration(
+configuration = lusid_configuration.Configuration(
     host = "https://fbn-ci.lusid.com/configuration"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Enter a context with an instance of the API client
-with lusid.ApiClient(configuration) as api_client:
+with lusid_configuration.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = lusid.ConfigurationSetsApi(api_client)
+    api_instance = lusid_configuration.ConfigurationSetsApi(api_client)
     type = 'type_example' # str | Whether the configuration set is Personal or Shared (optional)
 user_id = 'user_id_example' # str | Feature that allows Administrators to administer personal settings  (but never reveal the value of secrets) of a specific user. (optional)
 
@@ -726,12 +726,12 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import lusid
-from lusid.rest import ApiException
+import lusid_configuration
+from lusid_configuration.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://fbn-ci.lusid.com/configuration
 # See configuration.py for a list of all supported configuration parameters.
-configuration = lusid.Configuration(
+configuration = lusid_configuration.Configuration(
     host = "https://fbn-ci.lusid.com/configuration"
 )
 
@@ -741,15 +741,15 @@ configuration = lusid.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: oauth2
-configuration = lusid.Configuration(
+configuration = lusid_configuration.Configuration(
     host = "https://fbn-ci.lusid.com/configuration"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Enter a context with an instance of the API client
-with lusid.ApiClient(configuration) as api_client:
+with lusid_configuration.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = lusid.ConfigurationSetsApi(api_client)
+    api_instance = lusid_configuration.ConfigurationSetsApi(api_client)
     type = 'type_example' # str | Whether the configuration set is Personal or Shared
 scope = 'scope_example' # str | The scope that identifies a configuration set
 code = 'code_example' # str | The code that identifies a configuration set
@@ -810,12 +810,12 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import lusid
-from lusid.rest import ApiException
+import lusid_configuration
+from lusid_configuration.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://fbn-ci.lusid.com/configuration
 # See configuration.py for a list of all supported configuration parameters.
-configuration = lusid.Configuration(
+configuration = lusid_configuration.Configuration(
     host = "https://fbn-ci.lusid.com/configuration"
 )
 
@@ -825,15 +825,15 @@ configuration = lusid.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: oauth2
-configuration = lusid.Configuration(
+configuration = lusid_configuration.Configuration(
     host = "https://fbn-ci.lusid.com/configuration"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Enter a context with an instance of the API client
-with lusid.ApiClient(configuration) as api_client:
+with lusid_configuration.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = lusid.ConfigurationSetsApi(api_client)
+    api_instance = lusid_configuration.ConfigurationSetsApi(api_client)
     type = 'type_example' # str | Whether the configuration set is Personal or Shared
 scope = 'scope_example' # str | The scope that identifies a configuration set
 code = 'code_example' # str | The code that identifies a configuration set
