@@ -8,9 +8,9 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "0.1.131",
+    "version": "0.1.146",
     "x-logo": {
-      "url": "https://content.finbourne.com/LUSID-header.png",
+      "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
     },
     "description": "FINBOURNE Technology"
@@ -2564,18 +2564,20 @@
         "additionalProperties": false
       },
       "UpdateConfigurationItem": {
+        "required": [
+          "value"
+        ],
         "type": "object",
         "properties": {
           "value": {
-            "maxLength": 4096,
+            "maxLength": 2000000,
             "minLength": 1,
             "pattern": "(?s).*",
             "type": "string",
-            "description": "The new value of the configuration item",
-            "nullable": true
+            "description": "The new value of the configuration item"
           },
           "description": {
-            "maxLength": 1024,
+            "maxLength": 255,
             "minLength": 0,
             "pattern": "^([\\p{L}\\p{Z}\\p{N}_.:\\/=+\\-@]*)$",
             "type": "string",
@@ -2590,7 +2592,7 @@
         "type": "object",
         "properties": {
           "description": {
-            "maxLength": 1024,
+            "maxLength": 255,
             "minLength": 0,
             "pattern": "^([\\p{L}\\p{Z}\\p{N}_.:\\/=+\\-@]*)$",
             "type": "string",
