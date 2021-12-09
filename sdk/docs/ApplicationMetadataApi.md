@@ -1,4 +1,4 @@
-# lusid_configuration.ApplicationMetadataApi
+# lusid.ApplicationMetadataApi
 
 All URIs are relative to *https://fbn-ci.lusid.com/configuration*
 
@@ -20,12 +20,12 @@ Get the comprehensive set of resources that are available for access control
 ```python
 from __future__ import print_function
 import time
-import lusid_configuration
-from lusid_configuration.rest import ApiException
+import lusid
+from lusid.rest import ApiException
 from pprint import pprint
 # Defining the host is optional and defaults to https://fbn-ci.lusid.com/configuration
 # See configuration.py for a list of all supported configuration parameters.
-configuration = lusid_configuration.Configuration(
+configuration = lusid.Configuration(
     host = "https://fbn-ci.lusid.com/configuration"
 )
 
@@ -35,15 +35,15 @@ configuration = lusid_configuration.Configuration(
 # satisfies your auth use case.
 
 # Configure OAuth2 access token for authorization: oauth2
-configuration = lusid_configuration.Configuration(
+configuration = lusid.Configuration(
     host = "https://fbn-ci.lusid.com/configuration"
 )
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Enter a context with an instance of the API client
-with lusid_configuration.ApiClient(configuration) as api_client:
+with lusid.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = lusid_configuration.ApplicationMetadataApi(api_client)
+    api_instance = lusid.ApplicationMetadataApi(api_client)
     
     try:
         # [EARLY ACCESS] ListAccessControlledResources: Get resources available for access control
