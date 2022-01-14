@@ -8,7 +8,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "0.1.150",
+    "version": "0.1.151",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -2178,7 +2178,6 @@
           "description": {
             "maxLength": 255,
             "minLength": 0,
-            "pattern": "^([\\p{L}\\p{Z}\\p{N}_.:\\/=+\\-@]*)$",
             "type": "string",
             "description": "The description of the new configuration item",
             "nullable": true
@@ -2204,7 +2203,6 @@
           "description": {
             "maxLength": 255,
             "minLength": 0,
-            "pattern": "^([\\p{L}\\p{Z}\\p{N}_.:\\/=+\\-@]*)$",
             "type": "string",
             "description": "The description of the new configuration set",
             "nullable": true
@@ -2579,7 +2577,6 @@
           "description": {
             "maxLength": 255,
             "minLength": 0,
-            "pattern": "^([\\p{L}\\p{Z}\\p{N}_.:\\/=+\\-@]*)$",
             "type": "string",
             "description": "The new description of the configuration item",
             "nullable": true
@@ -2594,7 +2591,6 @@
           "description": {
             "maxLength": 255,
             "minLength": 0,
-            "pattern": "^([\\p{L}\\p{Z}\\p{N}_.:\\/=+\\-@]*)$",
             "type": "string",
             "description": "The new description of the configuration set",
             "nullable": true
