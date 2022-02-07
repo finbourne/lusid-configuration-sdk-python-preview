@@ -8,7 +8,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "0.1.159",
+    "version": "0.1.162",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -294,6 +294,7 @@
                       "key": "password",
                       "value": "a super secret password",
                       "type": "secret",
+                      "isSecret": true,
                       "ref": "config://shared/official/system-a-config/password"
                     }
                   ],
@@ -319,6 +320,7 @@
                       "key": "password",
                       "value": "a super secret password",
                       "type": "secret",
+                      "isSecret": true,
                       "ref": "config://shared/official/system-a-config/password"
                     }
                   ],
@@ -344,6 +346,7 @@
                       "key": "password",
                       "value": "a super secret password",
                       "type": "secret",
+                      "isSecret": true,
                       "ref": "config://shared/official/system-a-config/password"
                     }
                   ],
@@ -607,6 +610,7 @@
                       "key": "password",
                       "value": "a super secret password",
                       "type": "secret",
+                      "isSecret": true,
                       "ref": "config://shared/official/system-a-config/password"
                     }
                   ],
@@ -632,6 +636,7 @@
                       "key": "password",
                       "value": "a super secret password",
                       "type": "secret",
+                      "isSecret": true,
                       "ref": "config://shared/official/system-a-config/password"
                     }
                   ],
@@ -657,6 +662,7 @@
                       "key": "password",
                       "value": "a super secret password",
                       "type": "secret",
+                      "isSecret": true,
                       "ref": "config://shared/official/system-a-config/password"
                     }
                   ],
@@ -841,6 +847,7 @@
                       "key": "password",
                       "value": "a super secret password",
                       "type": "secret",
+                      "isSecret": true,
                       "ref": "config://shared/official/system-a-config/password"
                     }
                   ],
@@ -866,6 +873,7 @@
                       "key": "password",
                       "value": "a super secret password",
                       "type": "secret",
+                      "isSecret": true,
                       "ref": "config://shared/official/system-a-config/password"
                     }
                   ],
@@ -891,6 +899,7 @@
                       "key": "password",
                       "value": "a super secret password",
                       "type": "secret",
+                      "isSecret": true,
                       "ref": "config://shared/official/system-a-config/password"
                     }
                   ],
@@ -1208,6 +1217,7 @@
                       "key": "password",
                       "value": "a super secret password",
                       "type": "secret",
+                      "isSecret": true,
                       "ref": "config://shared/official/system-a-config/password"
                     }
                   ],
@@ -1233,6 +1243,7 @@
                       "key": "password",
                       "value": "a super secret password",
                       "type": "secret",
+                      "isSecret": true,
                       "ref": "config://shared/official/system-a-config/password"
                     }
                   ],
@@ -1258,6 +1269,7 @@
                       "key": "password",
                       "value": "a super secret password",
                       "type": "secret",
+                      "isSecret": true,
                       "ref": "config://shared/official/system-a-config/password"
                     }
                   ],
@@ -1427,6 +1439,7 @@
                   "key": "password",
                   "value": "Password for System A",
                   "type": "secret",
+                  "isSecret": true,
                   "ref": "config://shared/official/system-a-config/password"
                 }
               },
@@ -1443,6 +1456,7 @@
                   "key": "password",
                   "value": "Password for System A",
                   "type": "secret",
+                  "isSecret": true,
                   "ref": "config://shared/official/system-a-config/password"
                 }
               },
@@ -1459,6 +1473,7 @@
                   "key": "password",
                   "value": "Password for System A",
                   "type": "secret",
+                  "isSecret": true,
                   "ref": "config://shared/official/system-a-config/password"
                 }
               }
@@ -1651,6 +1666,7 @@
                   "key": "password",
                   "value": "Password for System A",
                   "type": "secret",
+                  "isSecret": true,
                   "ref": "config://shared/official/system-a-config/password"
                 }
               },
@@ -1667,6 +1683,7 @@
                   "key": "password",
                   "value": "Password for System A",
                   "type": "secret",
+                  "isSecret": true,
                   "ref": "config://shared/official/system-a-config/password"
                 }
               },
@@ -1683,6 +1700,7 @@
                   "key": "password",
                   "value": "Password for System A",
                   "type": "secret",
+                  "isSecret": true,
                   "ref": "config://shared/official/system-a-config/password"
                 }
               }
@@ -1993,6 +2011,7 @@
         "required": [
           "createdAt",
           "createdBy",
+          "isSecret",
           "key",
           "lastModifiedAt",
           "lastModifiedBy",
@@ -2038,6 +2057,10 @@
             "description": "Defines how the value is presented.\r\nIf it is secret, the value will be hidden.\r\nIf it is text, the value will be in plain-text.",
             "readOnly": true
           },
+          "isSecret": {
+            "type": "boolean",
+            "description": "Defines whether or not the value is a secret.\r\nThis field will eventually replace the Type field of this class."
+          },
           "ref": {
             "type": "string",
             "description": "The reference to the configuration item",
@@ -2049,6 +2072,7 @@
       },
       "ConfigurationItemSummary": {
         "required": [
+          "isSecret",
           "key",
           "ref",
           "type",
@@ -2068,6 +2092,10 @@
             "type": "string",
             "description": "Defines how the value is presented.\r\nIf it is secret, the value will be hidden.\r\nIf it is text, the value will be in plain-text.",
             "readOnly": true
+          },
+          "isSecret": {
+            "type": "boolean",
+            "description": "Defines whether or not the value is a secret.\r\nThis field will eventually replace the Type field of this class."
           },
           "ref": {
             "type": "string",
@@ -2152,7 +2180,6 @@
       "CreateConfigurationItem": {
         "required": [
           "key",
-          "type",
           "value"
         ],
         "type": "object",
@@ -2173,7 +2200,13 @@
           },
           "type": {
             "type": "string",
-            "description": "The type (text or secret) of the new configuration item"
+            "description": "The type (text or secret) of the new configuration item",
+            "nullable": true
+          },
+          "isSecret": {
+            "type": "boolean",
+            "description": "Defines whether or not the value is a secret.\r\nThis field will eventually replace the Type field of this class.",
+            "nullable": true
           },
           "description": {
             "maxLength": 255,
