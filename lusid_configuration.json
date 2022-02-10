@@ -8,7 +8,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "0.1.164",
+    "version": "0.1.167",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -294,6 +294,7 @@
                       "key": "password",
                       "value": "a super secret password",
                       "type": "secret",
+                      "valueType": "text",
                       "isSecret": true,
                       "ref": "config://shared/official/system-a-config/password"
                     }
@@ -320,6 +321,7 @@
                       "key": "password",
                       "value": "a super secret password",
                       "type": "secret",
+                      "valueType": "text",
                       "isSecret": true,
                       "ref": "config://shared/official/system-a-config/password"
                     }
@@ -346,6 +348,7 @@
                       "key": "password",
                       "value": "a super secret password",
                       "type": "secret",
+                      "valueType": "text",
                       "isSecret": true,
                       "ref": "config://shared/official/system-a-config/password"
                     }
@@ -610,6 +613,7 @@
                       "key": "password",
                       "value": "a super secret password",
                       "type": "secret",
+                      "valueType": "text",
                       "isSecret": true,
                       "ref": "config://shared/official/system-a-config/password"
                     }
@@ -636,6 +640,7 @@
                       "key": "password",
                       "value": "a super secret password",
                       "type": "secret",
+                      "valueType": "text",
                       "isSecret": true,
                       "ref": "config://shared/official/system-a-config/password"
                     }
@@ -662,6 +667,7 @@
                       "key": "password",
                       "value": "a super secret password",
                       "type": "secret",
+                      "valueType": "text",
                       "isSecret": true,
                       "ref": "config://shared/official/system-a-config/password"
                     }
@@ -847,6 +853,7 @@
                       "key": "password",
                       "value": "a super secret password",
                       "type": "secret",
+                      "valueType": "text",
                       "isSecret": true,
                       "ref": "config://shared/official/system-a-config/password"
                     }
@@ -873,6 +880,7 @@
                       "key": "password",
                       "value": "a super secret password",
                       "type": "secret",
+                      "valueType": "text",
                       "isSecret": true,
                       "ref": "config://shared/official/system-a-config/password"
                     }
@@ -899,6 +907,7 @@
                       "key": "password",
                       "value": "a super secret password",
                       "type": "secret",
+                      "valueType": "text",
                       "isSecret": true,
                       "ref": "config://shared/official/system-a-config/password"
                     }
@@ -1158,6 +1167,7 @@
               "example": {
                 "key": "password",
                 "value": "a super secret password",
+                "valueType": "text",
                 "type": "secret",
                 "description": "Password for System A"
               }
@@ -1169,6 +1179,7 @@
               "example": {
                 "key": "password",
                 "value": "a super secret password",
+                "valueType": "text",
                 "type": "secret",
                 "description": "Password for System A"
               }
@@ -1180,6 +1191,7 @@
               "example": {
                 "key": "password",
                 "value": "a super secret password",
+                "valueType": "text",
                 "type": "secret",
                 "description": "Password for System A"
               }
@@ -1191,6 +1203,7 @@
               "example": {
                 "key": "password",
                 "value": "a super secret password",
+                "valueType": "text",
                 "type": "secret",
                 "description": "Password for System A"
               }
@@ -1217,6 +1230,7 @@
                       "key": "password",
                       "value": "a super secret password",
                       "type": "secret",
+                      "valueType": "text",
                       "isSecret": true,
                       "ref": "config://shared/official/system-a-config/password"
                     }
@@ -1243,6 +1257,7 @@
                       "key": "password",
                       "value": "a super secret password",
                       "type": "secret",
+                      "valueType": "text",
                       "isSecret": true,
                       "ref": "config://shared/official/system-a-config/password"
                     }
@@ -1269,6 +1284,7 @@
                       "key": "password",
                       "value": "a super secret password",
                       "type": "secret",
+                      "valueType": "text",
                       "isSecret": true,
                       "ref": "config://shared/official/system-a-config/password"
                     }
@@ -1439,6 +1455,7 @@
                   "key": "password",
                   "value": "Password for System A",
                   "type": "secret",
+                  "valueType": "text",
                   "isSecret": true,
                   "ref": "config://shared/official/system-a-config/password"
                 }
@@ -1456,6 +1473,7 @@
                   "key": "password",
                   "value": "Password for System A",
                   "type": "secret",
+                  "valueType": "text",
                   "isSecret": true,
                   "ref": "config://shared/official/system-a-config/password"
                 }
@@ -1473,6 +1491,7 @@
                   "key": "password",
                   "value": "Password for System A",
                   "type": "secret",
+                  "valueType": "text",
                   "isSecret": true,
                   "ref": "config://shared/official/system-a-config/password"
                 }
@@ -1616,6 +1635,7 @@
               },
               "example": {
                 "value": "updated password",
+                "valueType": "text",
                 "description": "Password for system A and B"
               }
             },
@@ -1625,6 +1645,7 @@
               },
               "example": {
                 "value": "updated password",
+                "valueType": "text",
                 "description": "Password for system A and B"
               }
             },
@@ -1634,6 +1655,7 @@
               },
               "example": {
                 "value": "updated password",
+                "valueType": "text",
                 "description": "Password for system A and B"
               }
             },
@@ -1643,6 +1665,7 @@
               },
               "example": {
                 "value": "updated password",
+                "valueType": "text",
                 "description": "Password for system A and B"
               }
             }
@@ -1666,6 +1689,7 @@
                   "key": "password",
                   "value": "Password for System A",
                   "type": "secret",
+                  "valueType": "text",
                   "isSecret": true,
                   "ref": "config://shared/official/system-a-config/password"
                 }
@@ -1683,6 +1707,7 @@
                   "key": "password",
                   "value": "Password for System A",
                   "type": "secret",
+                  "valueType": "text",
                   "isSecret": true,
                   "ref": "config://shared/official/system-a-config/password"
                 }
@@ -1700,6 +1725,7 @@
                   "key": "password",
                   "value": "Password for System A",
                   "type": "secret",
+                  "valueType": "text",
                   "isSecret": true,
                   "ref": "config://shared/official/system-a-config/password"
                 }
@@ -2017,7 +2043,8 @@
           "lastModifiedBy",
           "ref",
           "type",
-          "value"
+          "value",
+          "valueType"
         ],
         "type": "object",
         "properties": {
@@ -2057,6 +2084,10 @@
             "description": "Defines how the value is presented.\r\nIf it is secret, the value will be hidden.\r\nIf it is text, the value will be in plain-text.",
             "readOnly": true
           },
+          "valueType": {
+            "type": "string",
+            "description": "The type of the configuration item's value"
+          },
           "isSecret": {
             "type": "boolean",
             "description": "Defines whether or not the value is a secret.\r\nThis field will eventually replace the Type field of this class."
@@ -2076,7 +2107,8 @@
           "key",
           "ref",
           "type",
-          "value"
+          "value",
+          "valueType"
         ],
         "type": "object",
         "properties": {
@@ -2092,6 +2124,10 @@
             "type": "string",
             "description": "Defines how the value is presented.\r\nIf it is secret, the value will be hidden.\r\nIf it is text, the value will be in plain-text.",
             "readOnly": true
+          },
+          "valueType": {
+            "type": "string",
+            "description": "The type of the configuration item's value"
           },
           "isSecret": {
             "type": "boolean",
@@ -2197,6 +2233,11 @@
             "pattern": "(?s).*",
             "type": "string",
             "description": "The value of the new configuration item\r\n            \r\nThe maximum size for secrets is 4KB and for text values is 2MB"
+          },
+          "valueType": {
+            "type": "string",
+            "description": "The type of the new configuration item's value",
+            "nullable": true
           },
           "type": {
             "type": "string",
@@ -2606,6 +2647,11 @@
             "pattern": "(?s).*",
             "type": "string",
             "description": "The new value of the configuration item"
+          },
+          "valueType": {
+            "type": "string",
+            "description": "The type of the new configuration item's value",
+            "nullable": true
           },
           "description": {
             "maxLength": 255,
