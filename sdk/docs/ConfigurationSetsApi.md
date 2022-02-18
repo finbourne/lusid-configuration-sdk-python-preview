@@ -754,7 +754,7 @@ with lusid_configuration.ApiClient(configuration) as api_client:
 scope = 'scope_example' # str | The scope that identifies a configuration set
 code = 'code_example' # str | The code that identifies a configuration set
 key = 'key_example' # str | The key that identifies a configuration item
-update_configuration_item = {"value":"updated password","valueType":"text","description":"Password for system A and B"} # UpdateConfigurationItem | The data to update a configuration item
+update_configuration_item = {"value":"updated password","description":"Password for system A and B"} # UpdateConfigurationItem | The data to update a configuration item
 user_id = 'user_id_example' # str | Feature that allows Administrators to administer personal settings  (but never reveal the value of secrets) of a specific user. (optional)
 
     try:

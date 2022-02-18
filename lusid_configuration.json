@@ -8,7 +8,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "0.1.167",
+    "version": "0.1.176",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -1635,7 +1635,6 @@
               },
               "example": {
                 "value": "updated password",
-                "valueType": "text",
                 "description": "Password for system A and B"
               }
             },
@@ -1645,7 +1644,6 @@
               },
               "example": {
                 "value": "updated password",
-                "valueType": "text",
                 "description": "Password for system A and B"
               }
             },
@@ -1655,7 +1653,6 @@
               },
               "example": {
                 "value": "updated password",
-                "valueType": "text",
                 "description": "Password for system A and B"
               }
             },
@@ -1665,7 +1662,6 @@
               },
               "example": {
                 "value": "updated password",
-                "valueType": "text",
                 "description": "Password for system A and B"
               }
             }
@@ -2647,11 +2643,6 @@
             "pattern": "(?s).*",
             "type": "string",
             "description": "The new value of the configuration item"
-          },
-          "valueType": {
-            "type": "string",
-            "description": "The type of the new configuration item's value",
-            "nullable": true
           },
           "description": {
             "maxLength": 255,
