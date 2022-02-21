@@ -12,6 +12,8 @@ Method | HTTP request | Description
 [**generate_access_token**](ConfigurationSetsApi.md#generate_access_token) | **PUT** /api/sets/personal/me | [EXPERIMENTAL] GenerateAccessToken: Generate a Personal Access Token for the current user and stores it in the me token
 [**get_configuration_item**](ConfigurationSetsApi.md#get_configuration_item) | **GET** /api/sets/{type}/{scope}/{code}/items/{key} | [EXPERIMENTAL] GetConfigurationItem: Get the specific configuration item within an existing set
 [**get_configuration_set**](ConfigurationSetsApi.md#get_configuration_set) | **GET** /api/sets/{type}/{scope}/{code} | [EXPERIMENTAL] GetConfigurationSet: Get a configuration set, including all the associated metadata. By default secrets will not be revealed
+[**get_system_configuration_items**](ConfigurationSetsApi.md#get_system_configuration_items) | **GET** /api/sets/system/{code}/items/{key} | [EXPERIMENTAL] GetSystemConfigurationItems: Get the specific system configuration items within a system set  All users have access to this endpoint
+[**get_system_configuration_sets**](ConfigurationSetsApi.md#get_system_configuration_sets) | **GET** /api/sets/system/{code} | [EXPERIMENTAL] GetSystemConfigurationSets: Get the specified system configuration sets, including all their associated metadata. By default secrets will not be revealed  All users have access to this endpoint
 [**list_configuration_sets**](ConfigurationSetsApi.md#list_configuration_sets) | **GET** /api/sets | [EXPERIMENTAL] ListConfigurationSets: List all configuration sets summaries (I.e. list of scope/code combinations available)
 [**update_configuration_item**](ConfigurationSetsApi.md#update_configuration_item) | **PUT** /api/sets/{type}/{scope}/{code}/items/{key} | [EXPERIMENTAL] UpdateConfigurationItem: Update a configuration item&#39;s value and/or description
 [**update_configuration_set**](ConfigurationSetsApi.md#update_configuration_set) | **PUT** /api/sets/{type}/{scope}/{code} | [EXPERIMENTAL] UpdateConfigurationSet: Update the description of a configuration set
@@ -636,6 +638,160 @@ Name | Type | Description  | Notes
 **200** | Success |  -  |
 **400** | The details of the input related failure |  -  |
 **404** | No configuration set exists with the provided identifiers |  -  |
+**0** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_system_configuration_items**
+> ResourceListOfConfigurationItem get_system_configuration_items(code, key, reveal=reveal)
+
+[EXPERIMENTAL] GetSystemConfigurationItems: Get the specific system configuration items within a system set  All users have access to this endpoint
+
+### Example
+
+* OAuth Authentication (oauth2):
+```python
+from __future__ import print_function
+import time
+import lusid_configuration
+from lusid_configuration.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://fbn-ci.lusid.com/configuration
+# See configuration.py for a list of all supported configuration parameters.
+configuration = lusid_configuration.Configuration(
+    host = "https://fbn-ci.lusid.com/configuration"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure OAuth2 access token for authorization: oauth2
+configuration = lusid_configuration.Configuration(
+    host = "https://fbn-ci.lusid.com/configuration"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with lusid_configuration.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = lusid_configuration.ConfigurationSetsApi(api_client)
+    code = 'code_example' # str | The code that identifies a system configuration set
+key = 'key_example' # str | The key that identifies a system configuration item
+reveal = True # bool | Whether to reveal the secrets (optional)
+
+    try:
+        # [EXPERIMENTAL] GetSystemConfigurationItems: Get the specific system configuration items within a system set  All users have access to this endpoint
+        api_response = api_instance.get_system_configuration_items(code, key, reveal=reveal)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ConfigurationSetsApi->get_system_configuration_items: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **code** | **str**| The code that identifies a system configuration set | 
+ **key** | **str**| The key that identifies a system configuration item | 
+ **reveal** | **bool**| Whether to reveal the secrets | [optional] 
+
+### Return type
+
+[**ResourceListOfConfigurationItem**](ResourceListOfConfigurationItem.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+**400** | The details of the input related failure |  -  |
+**404** | No system configuration item exists with the provided identifiers |  -  |
+**0** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_system_configuration_sets**
+> ResourceListOfConfigurationSet get_system_configuration_sets(code, reveal=reveal)
+
+[EXPERIMENTAL] GetSystemConfigurationSets: Get the specified system configuration sets, including all their associated metadata. By default secrets will not be revealed  All users have access to this endpoint
+
+### Example
+
+* OAuth Authentication (oauth2):
+```python
+from __future__ import print_function
+import time
+import lusid_configuration
+from lusid_configuration.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://fbn-ci.lusid.com/configuration
+# See configuration.py for a list of all supported configuration parameters.
+configuration = lusid_configuration.Configuration(
+    host = "https://fbn-ci.lusid.com/configuration"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure OAuth2 access token for authorization: oauth2
+configuration = lusid_configuration.Configuration(
+    host = "https://fbn-ci.lusid.com/configuration"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with lusid_configuration.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = lusid_configuration.ConfigurationSetsApi(api_client)
+    code = 'code_example' # str | The code that identifies a system configuration set
+reveal = True # bool | Whether to reveal the secrets (optional)
+
+    try:
+        # [EXPERIMENTAL] GetSystemConfigurationSets: Get the specified system configuration sets, including all their associated metadata. By default secrets will not be revealed  All users have access to this endpoint
+        api_response = api_instance.get_system_configuration_sets(code, reveal=reveal)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ConfigurationSetsApi->get_system_configuration_sets: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **code** | **str**| The code that identifies a system configuration set | 
+ **reveal** | **bool**| Whether to reveal the secrets | [optional] 
+
+### Return type
+
+[**ResourceListOfConfigurationSet**](ResourceListOfConfigurationSet.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+**400** | The details of the input related failure |  -  |
+**404** | No system configuration set exists with the provided identifiers |  -  |
 **0** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
