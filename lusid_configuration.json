@@ -8,7 +8,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "0.1.185",
+    "version": "0.1.194",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -2709,7 +2709,7 @@
           },
           "valueType": {
             "type": "string",
-            "description": "The type (text, number, boolean, textCollection, numberCollection) of the new configuration item's value",
+            "description": "The type (text, number, boolean, textCollection, numberCollection) of the new configuration item's value.\r\nThe validation for each type is as follows:\r\n- text: any value\r\n- number: double (e.g. \"5.5\")\r\n- boolean: true/false\r\n- textCollection: comma separated list (e.g. \"a,b,c\")\r\n- numberCollection: comma separated list of doubles (e.g. \"1,2,3\")",
             "nullable": true
           },
           "type": {
