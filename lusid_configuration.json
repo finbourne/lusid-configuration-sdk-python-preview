@@ -8,7 +8,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "0.1.293",
+    "version": "0.1.297",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -74,7 +74,7 @@
         "tags": [
           "ConfigurationSets"
         ],
-        "summary": "[EXPERIMENTAL] ListConfigurationSets: List all configuration sets summaries (I.e. list of scope/code combinations available)",
+        "summary": "[EARLY ACCESS] ListConfigurationSets: List all configuration sets summaries (I.e. list of scope/code combinations available)",
         "operationId": "ListConfigurationSets",
         "parameters": [
           {
@@ -194,13 +194,13 @@
             "oauth2": []
           }
         ],
-        "x-fbn-apistatus": "Experimental"
+        "x-fbn-apistatus": "EarlyAccess"
       },
       "post": {
         "tags": [
           "ConfigurationSets"
         ],
-        "summary": "[EXPERIMENTAL] CreateConfigurationSet: Create a configuration set",
+        "summary": "[EARLY ACCESS] CreateConfigurationSet: Create a configuration set",
         "operationId": "CreateConfigurationSet",
         "parameters": [
           {
@@ -395,7 +395,7 @@
             "oauth2": []
           }
         ],
-        "x-fbn-apistatus": "Experimental"
+        "x-fbn-apistatus": "EarlyAccess"
       }
     },
     "/api/sets/personal/me": {
@@ -403,7 +403,7 @@
         "tags": [
           "ConfigurationSets"
         ],
-        "summary": "[EXPERIMENTAL] GenerateAccessToken: Generate a Personal Access Token for the current user and stores it in the me token",
+        "summary": "[EARLY ACCESS] GenerateAccessToken: Generate a Personal Access Token for the current user and stores it in the me token",
         "operationId": "GenerateAccessToken",
         "parameters": [
           {
@@ -492,13 +492,13 @@
             "oauth2": []
           }
         ],
-        "x-fbn-apistatus": "Experimental"
+        "x-fbn-apistatus": "EarlyAccess"
       },
       "delete": {
         "tags": [
           "ConfigurationSets"
         ],
-        "summary": "[EXPERIMENTAL] DeleteAccessToken: Delete any stored Personal Access Token for the current user",
+        "summary": "[EARLY ACCESS] DeleteAccessToken: Delete any stored Personal Access Token for the current user",
         "operationId": "DeleteAccessToken",
         "responses": {
           "204": {
@@ -520,7 +520,7 @@
             "oauth2": []
           }
         ],
-        "x-fbn-apistatus": "Experimental"
+        "x-fbn-apistatus": "EarlyAccess"
       }
     },
     "/api/sets/system/{code}": {
@@ -528,7 +528,7 @@
         "tags": [
           "ConfigurationSets"
         ],
-        "summary": "[EXPERIMENTAL] GetSystemConfigurationSets: Get the specified system configuration sets, including all their associated metadata. By default secrets will not be revealed\r\nAll users have access to this endpoint",
+        "summary": "[EARLY ACCESS] GetSystemConfigurationSets: Get the specified system configuration sets, including all their associated metadata. By default secrets will not be revealed\r\nAll users have access to this endpoint",
         "operationId": "GetSystemConfigurationSets",
         "parameters": [
           {
@@ -773,7 +773,7 @@
             "oauth2": []
           }
         ],
-        "x-fbn-apistatus": "Experimental"
+        "x-fbn-apistatus": "EarlyAccess"
       }
     },
     "/api/sets/system/{code}/items/{key}": {
@@ -781,7 +781,7 @@
         "tags": [
           "ConfigurationSets"
         ],
-        "summary": "[EXPERIMENTAL] GetSystemConfigurationItems: Get the specific system configuration items within a system set\r\nAll users have access to this endpoint",
+        "summary": "[EARLY ACCESS] GetSystemConfigurationItems: Get the specific system configuration items within a system set\r\nAll users have access to this endpoint",
         "operationId": "GetSystemConfigurationItems",
         "parameters": [
           {
@@ -985,7 +985,7 @@
             "oauth2": []
           }
         ],
-        "x-fbn-apistatus": "Experimental"
+        "x-fbn-apistatus": "EarlyAccess"
       }
     },
     "/api/sets/{type}/{scope}/{code}": {
@@ -993,7 +993,7 @@
         "tags": [
           "ConfigurationSets"
         ],
-        "summary": "[EXPERIMENTAL] GetConfigurationSet: Get a configuration set, including all the associated metadata. By default secrets will not be revealed",
+        "summary": "[EARLY ACCESS] GetConfigurationSet: Get a configuration set, including all the associated metadata. By default secrets will not be revealed",
         "operationId": "GetConfigurationSet",
         "parameters": [
           {
@@ -1196,13 +1196,13 @@
             "oauth2": []
           }
         ],
-        "x-fbn-apistatus": "Experimental"
+        "x-fbn-apistatus": "EarlyAccess"
       },
       "put": {
         "tags": [
           "ConfigurationSets"
         ],
-        "summary": "[EXPERIMENTAL] UpdateConfigurationSet: Update the description of a configuration set",
+        "summary": "[EARLY ACCESS] UpdateConfigurationSet: Update the description of a configuration set",
         "operationId": "UpdateConfigurationSet",
         "parameters": [
           {
@@ -1433,13 +1433,13 @@
             "oauth2": []
           }
         ],
-        "x-fbn-apistatus": "Experimental"
+        "x-fbn-apistatus": "EarlyAccess"
       },
       "delete": {
         "tags": [
           "ConfigurationSets"
         ],
-        "summary": "[EXPERIMENTAL] DeleteConfigurationSet: Deletes a configuration set along with all their configuration items",
+        "summary": "[EARLY ACCESS] DeleteConfigurationSet: Deletes a configuration set along with all their configuration items",
         "operationId": "DeleteConfigurationSet",
         "parameters": [
           {
@@ -1552,7 +1552,7 @@
             "oauth2": []
           }
         ],
-        "x-fbn-apistatus": "Experimental"
+        "x-fbn-apistatus": "EarlyAccess"
       }
     },
     "/api/sets/{type}/{scope}/{code}/items": {
@@ -1560,7 +1560,7 @@
         "tags": [
           "ConfigurationSets"
         ],
-        "summary": "[EXPERIMENTAL] AddConfigurationToSet: Add a configuration item to an existing set",
+        "summary": "[EARLY ACCESS] AddConfigurationToSet: Add a configuration item to an existing set",
         "operationId": "AddConfigurationToSet",
         "parameters": [
           {
@@ -1807,7 +1807,7 @@
             "oauth2": []
           }
         ],
-        "x-fbn-apistatus": "Experimental"
+        "x-fbn-apistatus": "EarlyAccess"
       }
     },
     "/api/sets/{type}/{scope}/{code}/items/{key}": {
@@ -1815,7 +1815,7 @@
         "tags": [
           "ConfigurationSets"
         ],
-        "summary": "[EXPERIMENTAL] GetConfigurationItem: Get the specific configuration item within an existing set",
+        "summary": "[EARLY ACCESS] GetConfigurationItem: Get the specific configuration item within an existing set",
         "operationId": "GetConfigurationItem",
         "parameters": [
           {
@@ -2004,13 +2004,13 @@
             "oauth2": []
           }
         ],
-        "x-fbn-apistatus": "Experimental"
+        "x-fbn-apistatus": "EarlyAccess"
       },
       "put": {
         "tags": [
           "ConfigurationSets"
         ],
-        "summary": "[EXPERIMENTAL] UpdateConfigurationItem: Update a configuration item's value and/or description",
+        "summary": "[EARLY ACCESS] UpdateConfigurationItem: Update a configuration item's value and/or description",
         "operationId": "UpdateConfigurationItem",
         "parameters": [
           {
@@ -2231,13 +2231,13 @@
             "oauth2": []
           }
         ],
-        "x-fbn-apistatus": "Experimental"
+        "x-fbn-apistatus": "EarlyAccess"
       },
       "delete": {
         "tags": [
           "ConfigurationSets"
         ],
-        "summary": "[EXPERIMENTAL] DeleteConfigurationItem: Remove the specified configuration item from the specified configuration set",
+        "summary": "[EARLY ACCESS] DeleteConfigurationItem: Remove the specified configuration item from the specified configuration set",
         "operationId": "DeleteConfigurationItem",
         "parameters": [
           {
@@ -2363,7 +2363,7 @@
             "oauth2": []
           }
         ],
-        "x-fbn-apistatus": "Experimental"
+        "x-fbn-apistatus": "EarlyAccess"
       }
     }
   },

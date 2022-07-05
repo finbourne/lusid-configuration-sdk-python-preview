@@ -4,25 +4,25 @@ All URIs are relative to *https://fbn-ci.lusid.com/configuration*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**add_configuration_to_set**](ConfigurationSetsApi.md#add_configuration_to_set) | **POST** /api/sets/{type}/{scope}/{code}/items | [EXPERIMENTAL] AddConfigurationToSet: Add a configuration item to an existing set
-[**create_configuration_set**](ConfigurationSetsApi.md#create_configuration_set) | **POST** /api/sets | [EXPERIMENTAL] CreateConfigurationSet: Create a configuration set
-[**delete_access_token**](ConfigurationSetsApi.md#delete_access_token) | **DELETE** /api/sets/personal/me | [EXPERIMENTAL] DeleteAccessToken: Delete any stored Personal Access Token for the current user
-[**delete_configuration_item**](ConfigurationSetsApi.md#delete_configuration_item) | **DELETE** /api/sets/{type}/{scope}/{code}/items/{key} | [EXPERIMENTAL] DeleteConfigurationItem: Remove the specified configuration item from the specified configuration set
-[**delete_configuration_set**](ConfigurationSetsApi.md#delete_configuration_set) | **DELETE** /api/sets/{type}/{scope}/{code} | [EXPERIMENTAL] DeleteConfigurationSet: Deletes a configuration set along with all their configuration items
-[**generate_access_token**](ConfigurationSetsApi.md#generate_access_token) | **PUT** /api/sets/personal/me | [EXPERIMENTAL] GenerateAccessToken: Generate a Personal Access Token for the current user and stores it in the me token
-[**get_configuration_item**](ConfigurationSetsApi.md#get_configuration_item) | **GET** /api/sets/{type}/{scope}/{code}/items/{key} | [EXPERIMENTAL] GetConfigurationItem: Get the specific configuration item within an existing set
-[**get_configuration_set**](ConfigurationSetsApi.md#get_configuration_set) | **GET** /api/sets/{type}/{scope}/{code} | [EXPERIMENTAL] GetConfigurationSet: Get a configuration set, including all the associated metadata. By default secrets will not be revealed
-[**get_system_configuration_items**](ConfigurationSetsApi.md#get_system_configuration_items) | **GET** /api/sets/system/{code}/items/{key} | [EXPERIMENTAL] GetSystemConfigurationItems: Get the specific system configuration items within a system set  All users have access to this endpoint
-[**get_system_configuration_sets**](ConfigurationSetsApi.md#get_system_configuration_sets) | **GET** /api/sets/system/{code} | [EXPERIMENTAL] GetSystemConfigurationSets: Get the specified system configuration sets, including all their associated metadata. By default secrets will not be revealed  All users have access to this endpoint
-[**list_configuration_sets**](ConfigurationSetsApi.md#list_configuration_sets) | **GET** /api/sets | [EXPERIMENTAL] ListConfigurationSets: List all configuration sets summaries (I.e. list of scope/code combinations available)
-[**update_configuration_item**](ConfigurationSetsApi.md#update_configuration_item) | **PUT** /api/sets/{type}/{scope}/{code}/items/{key} | [EXPERIMENTAL] UpdateConfigurationItem: Update a configuration item&#39;s value and/or description
-[**update_configuration_set**](ConfigurationSetsApi.md#update_configuration_set) | **PUT** /api/sets/{type}/{scope}/{code} | [EXPERIMENTAL] UpdateConfigurationSet: Update the description of a configuration set
+[**add_configuration_to_set**](ConfigurationSetsApi.md#add_configuration_to_set) | **POST** /api/sets/{type}/{scope}/{code}/items | [EARLY ACCESS] AddConfigurationToSet: Add a configuration item to an existing set
+[**create_configuration_set**](ConfigurationSetsApi.md#create_configuration_set) | **POST** /api/sets | [EARLY ACCESS] CreateConfigurationSet: Create a configuration set
+[**delete_access_token**](ConfigurationSetsApi.md#delete_access_token) | **DELETE** /api/sets/personal/me | [EARLY ACCESS] DeleteAccessToken: Delete any stored Personal Access Token for the current user
+[**delete_configuration_item**](ConfigurationSetsApi.md#delete_configuration_item) | **DELETE** /api/sets/{type}/{scope}/{code}/items/{key} | [EARLY ACCESS] DeleteConfigurationItem: Remove the specified configuration item from the specified configuration set
+[**delete_configuration_set**](ConfigurationSetsApi.md#delete_configuration_set) | **DELETE** /api/sets/{type}/{scope}/{code} | [EARLY ACCESS] DeleteConfigurationSet: Deletes a configuration set along with all their configuration items
+[**generate_access_token**](ConfigurationSetsApi.md#generate_access_token) | **PUT** /api/sets/personal/me | [EARLY ACCESS] GenerateAccessToken: Generate a Personal Access Token for the current user and stores it in the me token
+[**get_configuration_item**](ConfigurationSetsApi.md#get_configuration_item) | **GET** /api/sets/{type}/{scope}/{code}/items/{key} | [EARLY ACCESS] GetConfigurationItem: Get the specific configuration item within an existing set
+[**get_configuration_set**](ConfigurationSetsApi.md#get_configuration_set) | **GET** /api/sets/{type}/{scope}/{code} | [EARLY ACCESS] GetConfigurationSet: Get a configuration set, including all the associated metadata. By default secrets will not be revealed
+[**get_system_configuration_items**](ConfigurationSetsApi.md#get_system_configuration_items) | **GET** /api/sets/system/{code}/items/{key} | [EARLY ACCESS] GetSystemConfigurationItems: Get the specific system configuration items within a system set  All users have access to this endpoint
+[**get_system_configuration_sets**](ConfigurationSetsApi.md#get_system_configuration_sets) | **GET** /api/sets/system/{code} | [EARLY ACCESS] GetSystemConfigurationSets: Get the specified system configuration sets, including all their associated metadata. By default secrets will not be revealed  All users have access to this endpoint
+[**list_configuration_sets**](ConfigurationSetsApi.md#list_configuration_sets) | **GET** /api/sets | [EARLY ACCESS] ListConfigurationSets: List all configuration sets summaries (I.e. list of scope/code combinations available)
+[**update_configuration_item**](ConfigurationSetsApi.md#update_configuration_item) | **PUT** /api/sets/{type}/{scope}/{code}/items/{key} | [EARLY ACCESS] UpdateConfigurationItem: Update a configuration item&#39;s value and/or description
+[**update_configuration_set**](ConfigurationSetsApi.md#update_configuration_set) | **PUT** /api/sets/{type}/{scope}/{code} | [EARLY ACCESS] UpdateConfigurationSet: Update the description of a configuration set
 
 
 # **add_configuration_to_set**
 > ConfigurationSet add_configuration_to_set(type, scope, code, create_configuration_item, user_id=user_id)
 
-[EXPERIMENTAL] AddConfigurationToSet: Add a configuration item to an existing set
+[EARLY ACCESS] AddConfigurationToSet: Add a configuration item to an existing set
 
 ### Example
 
@@ -61,7 +61,7 @@ create_configuration_item = {"key":"password","value":"a super secret password",
 user_id = 'user_id_example' # str | Feature that allows Administrators to administer personal settings  (but never reveal the value of secrets) of a specific user. (optional)
 
     try:
-        # [EXPERIMENTAL] AddConfigurationToSet: Add a configuration item to an existing set
+        # [EARLY ACCESS] AddConfigurationToSet: Add a configuration item to an existing set
         api_response = api_instance.add_configuration_to_set(type, scope, code, create_configuration_item, user_id=user_id)
         pprint(api_response)
     except ApiException as e:
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 # **create_configuration_set**
 > ConfigurationSet create_configuration_set(create_configuration_set, user_id=user_id)
 
-[EXPERIMENTAL] CreateConfigurationSet: Create a configuration set
+[EARLY ACCESS] CreateConfigurationSet: Create a configuration set
 
 ### Example
 
@@ -140,7 +140,7 @@ with lusid_configuration.ApiClient(configuration) as api_client:
 user_id = 'user_id_example' # str | Feature that allows Administrators to administer personal settings  (but never reveal the value of secrets) of a specific user. (optional)
 
     try:
-        # [EXPERIMENTAL] CreateConfigurationSet: Create a configuration set
+        # [EARLY ACCESS] CreateConfigurationSet: Create a configuration set
         api_response = api_instance.create_configuration_set(create_configuration_set, user_id=user_id)
         pprint(api_response)
     except ApiException as e:
@@ -179,7 +179,7 @@ Name | Type | Description  | Notes
 # **delete_access_token**
 > delete_access_token()
 
-[EXPERIMENTAL] DeleteAccessToken: Delete any stored Personal Access Token for the current user
+[EARLY ACCESS] DeleteAccessToken: Delete any stored Personal Access Token for the current user
 
 ### Example
 
@@ -213,7 +213,7 @@ with lusid_configuration.ApiClient(configuration) as api_client:
     api_instance = lusid_configuration.ConfigurationSetsApi(api_client)
     
     try:
-        # [EXPERIMENTAL] DeleteAccessToken: Delete any stored Personal Access Token for the current user
+        # [EARLY ACCESS] DeleteAccessToken: Delete any stored Personal Access Token for the current user
         api_instance.delete_access_token()
     except ApiException as e:
         print("Exception when calling ConfigurationSetsApi->delete_access_token: %s\n" % e)
@@ -246,7 +246,7 @@ void (empty response body)
 # **delete_configuration_item**
 > delete_configuration_item(type, scope, code, key, user_id=user_id)
 
-[EXPERIMENTAL] DeleteConfigurationItem: Remove the specified configuration item from the specified configuration set
+[EARLY ACCESS] DeleteConfigurationItem: Remove the specified configuration item from the specified configuration set
 
 ### Example
 
@@ -285,7 +285,7 @@ key = 'key_example' # str | The key that identifies a configuration item
 user_id = 'user_id_example' # str | Feature that allows Administrators to administer personal settings  (but never reveal the value of secrets) of a specific user. (optional)
 
     try:
-        # [EXPERIMENTAL] DeleteConfigurationItem: Remove the specified configuration item from the specified configuration set
+        # [EARLY ACCESS] DeleteConfigurationItem: Remove the specified configuration item from the specified configuration set
         api_instance.delete_configuration_item(type, scope, code, key, user_id=user_id)
     except ApiException as e:
         print("Exception when calling ConfigurationSetsApi->delete_configuration_item: %s\n" % e)
@@ -327,7 +327,7 @@ void (empty response body)
 # **delete_configuration_set**
 > delete_configuration_set(type, scope, code, user_id=user_id)
 
-[EXPERIMENTAL] DeleteConfigurationSet: Deletes a configuration set along with all their configuration items
+[EARLY ACCESS] DeleteConfigurationSet: Deletes a configuration set along with all their configuration items
 
 ### Example
 
@@ -365,7 +365,7 @@ code = 'code_example' # str | The code that identifies a configuration set
 user_id = 'user_id_example' # str | Feature that allows Administrators to administer personal settings  (but never reveal the value of secrets) of a specific user. (optional)
 
     try:
-        # [EXPERIMENTAL] DeleteConfigurationSet: Deletes a configuration set along with all their configuration items
+        # [EARLY ACCESS] DeleteConfigurationSet: Deletes a configuration set along with all their configuration items
         api_instance.delete_configuration_set(type, scope, code, user_id=user_id)
     except ApiException as e:
         print("Exception when calling ConfigurationSetsApi->delete_configuration_set: %s\n" % e)
@@ -406,7 +406,7 @@ void (empty response body)
 # **generate_access_token**
 > PersonalAccessToken generate_access_token(action=action)
 
-[EXPERIMENTAL] GenerateAccessToken: Generate a Personal Access Token for the current user and stores it in the me token
+[EARLY ACCESS] GenerateAccessToken: Generate a Personal Access Token for the current user and stores it in the me token
 
 ### Example
 
@@ -441,7 +441,7 @@ with lusid_configuration.ApiClient(configuration) as api_client:
     action = 'action_example' # str | action=regenerate = Even if an existing parameter exists, forcibly regenerate a new one (deleting the old)  action=ensure = If no parameter exists, create one. If one does already exist, verify that it is still valid (call a service?), and if so, return it. If it is not still valid, then regenerate a new one.  action=default = If a parameter exists, return it. If not then create one. If this parameter is not provided, this is the default behaviour. (optional)
 
     try:
-        # [EXPERIMENTAL] GenerateAccessToken: Generate a Personal Access Token for the current user and stores it in the me token
+        # [EARLY ACCESS] GenerateAccessToken: Generate a Personal Access Token for the current user and stores it in the me token
         api_response = api_instance.generate_access_token(action=action)
         pprint(api_response)
     except ApiException as e:
@@ -479,7 +479,7 @@ Name | Type | Description  | Notes
 # **get_configuration_item**
 > ConfigurationItem get_configuration_item(type, scope, code, key, reveal=reveal, user_id=user_id)
 
-[EXPERIMENTAL] GetConfigurationItem: Get the specific configuration item within an existing set
+[EARLY ACCESS] GetConfigurationItem: Get the specific configuration item within an existing set
 
 ### Example
 
@@ -519,7 +519,7 @@ reveal = True # bool | Whether to reveal the secrets. This is only available whe
 user_id = 'user_id_example' # str | Feature that allows Administrators to administer personal settings  (but never reveal the value of secrets) of a specific user. (optional)
 
     try:
-        # [EXPERIMENTAL] GetConfigurationItem: Get the specific configuration item within an existing set
+        # [EARLY ACCESS] GetConfigurationItem: Get the specific configuration item within an existing set
         api_response = api_instance.get_configuration_item(type, scope, code, key, reveal=reveal, user_id=user_id)
         pprint(api_response)
     except ApiException as e:
@@ -563,7 +563,7 @@ Name | Type | Description  | Notes
 # **get_configuration_set**
 > ConfigurationSet get_configuration_set(type, scope, code, reveal=reveal, user_id=user_id)
 
-[EXPERIMENTAL] GetConfigurationSet: Get a configuration set, including all the associated metadata. By default secrets will not be revealed
+[EARLY ACCESS] GetConfigurationSet: Get a configuration set, including all the associated metadata. By default secrets will not be revealed
 
 ### Example
 
@@ -602,7 +602,7 @@ reveal = True # bool | Whether to reveal the secrets. This is only available whe
 user_id = 'user_id_example' # str | Feature that allows Administrators to administer personal settings  (but never reveal the value of secrets) of a specific user. (optional)
 
     try:
-        # [EXPERIMENTAL] GetConfigurationSet: Get a configuration set, including all the associated metadata. By default secrets will not be revealed
+        # [EARLY ACCESS] GetConfigurationSet: Get a configuration set, including all the associated metadata. By default secrets will not be revealed
         api_response = api_instance.get_configuration_set(type, scope, code, reveal=reveal, user_id=user_id)
         pprint(api_response)
     except ApiException as e:
@@ -645,7 +645,7 @@ Name | Type | Description  | Notes
 # **get_system_configuration_items**
 > ResourceListOfConfigurationItem get_system_configuration_items(code, key, reveal=reveal)
 
-[EXPERIMENTAL] GetSystemConfigurationItems: Get the specific system configuration items within a system set  All users have access to this endpoint
+[EARLY ACCESS] GetSystemConfigurationItems: Get the specific system configuration items within a system set  All users have access to this endpoint
 
 ### Example
 
@@ -682,7 +682,7 @@ key = 'key_example' # str | The key that identifies a system configuration item
 reveal = True # bool | Whether to reveal the secrets (optional)
 
     try:
-        # [EXPERIMENTAL] GetSystemConfigurationItems: Get the specific system configuration items within a system set  All users have access to this endpoint
+        # [EARLY ACCESS] GetSystemConfigurationItems: Get the specific system configuration items within a system set  All users have access to this endpoint
         api_response = api_instance.get_system_configuration_items(code, key, reveal=reveal)
         pprint(api_response)
     except ApiException as e:
@@ -723,7 +723,7 @@ Name | Type | Description  | Notes
 # **get_system_configuration_sets**
 > ResourceListOfConfigurationSet get_system_configuration_sets(code, reveal=reveal)
 
-[EXPERIMENTAL] GetSystemConfigurationSets: Get the specified system configuration sets, including all their associated metadata. By default secrets will not be revealed  All users have access to this endpoint
+[EARLY ACCESS] GetSystemConfigurationSets: Get the specified system configuration sets, including all their associated metadata. By default secrets will not be revealed  All users have access to this endpoint
 
 ### Example
 
@@ -759,7 +759,7 @@ with lusid_configuration.ApiClient(configuration) as api_client:
 reveal = True # bool | Whether to reveal the secrets (optional)
 
     try:
-        # [EXPERIMENTAL] GetSystemConfigurationSets: Get the specified system configuration sets, including all their associated metadata. By default secrets will not be revealed  All users have access to this endpoint
+        # [EARLY ACCESS] GetSystemConfigurationSets: Get the specified system configuration sets, including all their associated metadata. By default secrets will not be revealed  All users have access to this endpoint
         api_response = api_instance.get_system_configuration_sets(code, reveal=reveal)
         pprint(api_response)
     except ApiException as e:
@@ -799,7 +799,7 @@ Name | Type | Description  | Notes
 # **list_configuration_sets**
 > ResourceListOfConfigurationSetSummary list_configuration_sets(type=type, user_id=user_id)
 
-[EXPERIMENTAL] ListConfigurationSets: List all configuration sets summaries (I.e. list of scope/code combinations available)
+[EARLY ACCESS] ListConfigurationSets: List all configuration sets summaries (I.e. list of scope/code combinations available)
 
 ### Example
 
@@ -835,7 +835,7 @@ with lusid_configuration.ApiClient(configuration) as api_client:
 user_id = 'user_id_example' # str | Feature that allows Administrators to administer personal settings  (but never reveal the value of secrets) of a specific user. (optional)
 
     try:
-        # [EXPERIMENTAL] ListConfigurationSets: List all configuration sets summaries (I.e. list of scope/code combinations available)
+        # [EARLY ACCESS] ListConfigurationSets: List all configuration sets summaries (I.e. list of scope/code combinations available)
         api_response = api_instance.list_configuration_sets(type=type, user_id=user_id)
         pprint(api_response)
     except ApiException as e:
@@ -874,7 +874,7 @@ Name | Type | Description  | Notes
 # **update_configuration_item**
 > ConfigurationItem update_configuration_item(type, scope, code, key, update_configuration_item, user_id=user_id)
 
-[EXPERIMENTAL] UpdateConfigurationItem: Update a configuration item's value and/or description
+[EARLY ACCESS] UpdateConfigurationItem: Update a configuration item's value and/or description
 
 ### Example
 
@@ -914,7 +914,7 @@ update_configuration_item = {"value":"updated password","description":"Password 
 user_id = 'user_id_example' # str | Feature that allows Administrators to administer personal settings  (but never reveal the value of secrets) of a specific user. (optional)
 
     try:
-        # [EXPERIMENTAL] UpdateConfigurationItem: Update a configuration item's value and/or description
+        # [EARLY ACCESS] UpdateConfigurationItem: Update a configuration item's value and/or description
         api_response = api_instance.update_configuration_item(type, scope, code, key, update_configuration_item, user_id=user_id)
         pprint(api_response)
     except ApiException as e:
@@ -958,7 +958,7 @@ Name | Type | Description  | Notes
 # **update_configuration_set**
 > ConfigurationSet update_configuration_set(type, scope, code, update_configuration_set, user_id=user_id)
 
-[EXPERIMENTAL] UpdateConfigurationSet: Update the description of a configuration set
+[EARLY ACCESS] UpdateConfigurationSet: Update the description of a configuration set
 
 ### Example
 
@@ -997,7 +997,7 @@ update_configuration_set = {"description":"The group of configurations related t
 user_id = 'user_id_example' # str | Feature that allows Administrators to administer personal settings  (but never reveal the value of secrets) of a specific user. (optional)
 
     try:
-        # [EXPERIMENTAL] UpdateConfigurationSet: Update the description of a configuration set
+        # [EARLY ACCESS] UpdateConfigurationSet: Update the description of a configuration set
         api_response = api_instance.update_configuration_set(type, scope, code, update_configuration_set, user_id=user_id)
         pprint(api_response)
     except ApiException as e:
