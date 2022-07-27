@@ -23,6 +23,18 @@ from lusid_configuration.exceptions import (  # noqa: F401
     ApiTypeError,
     ApiValueError
 )
+from lusid_configuration.models.configuration_item import ConfigurationItem
+from lusid_configuration.models.configuration_set import ConfigurationSet
+from lusid_configuration.models.create_configuration_item import CreateConfigurationItem
+from lusid_configuration.models.create_configuration_set import CreateConfigurationSet
+from lusid_configuration.models.lusid_problem_details import LusidProblemDetails
+from lusid_configuration.models.lusid_validation_problem_details import LusidValidationProblemDetails
+from lusid_configuration.models.personal_access_token import PersonalAccessToken
+from lusid_configuration.models.resource_list_of_configuration_item import ResourceListOfConfigurationItem
+from lusid_configuration.models.resource_list_of_configuration_set import ResourceListOfConfigurationSet
+from lusid_configuration.models.resource_list_of_configuration_set_summary import ResourceListOfConfigurationSetSummary
+from lusid_configuration.models.update_configuration_item import UpdateConfigurationItem
+from lusid_configuration.models.update_configuration_set import UpdateConfigurationSet
 
 
 class ConfigurationSetsApi(object):
@@ -110,10 +122,10 @@ class ConfigurationSetsApi(object):
                               request; this effectively ignores the authentication
                               in the spec for a single request.
         :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: Returns the result object, the HTTP status code, and the headers.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(ConfigurationSet, status_code(int), headers(HTTPHeaderDict))
+        :rtype: (ConfigurationSet, int, HTTPHeaderDict)
         """
 
         local_var_params = locals()
@@ -131,7 +143,8 @@ class ConfigurationSetsApi(object):
                 '_return_http_data_only',
                 '_preload_content',
                 '_request_timeout',
-                '_request_auth'
+                '_request_auth',
+                '_headers'
             ]
         )
 
@@ -198,7 +211,7 @@ class ConfigurationSetsApi(object):
         if 'user_id' in local_var_params and local_var_params['user_id'] is not None:  # noqa: E501
             query_params.append(('userId', local_var_params['user_id']))  # noqa: E501
 
-        header_params = {}
+        header_params = dict(local_var_params.get('_headers', {}))
 
         form_params = []
         local_var_files = {}
@@ -307,10 +320,10 @@ class ConfigurationSetsApi(object):
                               request; this effectively ignores the authentication
                               in the spec for a single request.
         :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: Returns the result object, the HTTP status code, and the headers.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(ConfigurationSet, status_code(int), headers(HTTPHeaderDict))
+        :rtype: (ConfigurationSet, int, HTTPHeaderDict)
         """
 
         local_var_params = locals()
@@ -325,7 +338,8 @@ class ConfigurationSetsApi(object):
                 '_return_http_data_only',
                 '_preload_content',
                 '_request_timeout',
-                '_request_auth'
+                '_request_auth',
+                '_headers'
             ]
         )
 
@@ -358,7 +372,7 @@ class ConfigurationSetsApi(object):
         if 'user_id' in local_var_params and local_var_params['user_id'] is not None:  # noqa: E501
             query_params.append(('userId', local_var_params['user_id']))  # noqa: E501
 
-        header_params = {}
+        header_params = dict(local_var_params.get('_headers', {}))
 
         form_params = []
         local_var_files = {}
@@ -458,7 +472,7 @@ class ConfigurationSetsApi(object):
                               request; this effectively ignores the authentication
                               in the spec for a single request.
         :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: Returns the result object, the HTTP status code, and the headers.
                  If the method is called asynchronously,
                  returns the request thread.
         :rtype: None
@@ -474,7 +488,8 @@ class ConfigurationSetsApi(object):
                 '_return_http_data_only',
                 '_preload_content',
                 '_request_timeout',
-                '_request_auth'
+                '_request_auth',
+                '_headers'
             ]
         )
 
@@ -493,7 +508,7 @@ class ConfigurationSetsApi(object):
 
         query_params = []
 
-        header_params = {}
+        header_params = dict(local_var_params.get('_headers', {}))
 
         form_params = []
         local_var_files = {}
@@ -504,6 +519,11 @@ class ConfigurationSetsApi(object):
             ['application/json'])  # noqa: E501
 
         header_params['Accept-Encoding'] = "gzip, deflate, br"
+
+
+        # set the LUSID header
+        header_params['X-LUSID-SDK-Language'] = 'Python'
+        header_params['X-LUSID-SDK-Version'] = '0.1.303'
 
         # Authentication setting
         auth_settings = ['oauth2']  # noqa: E501
@@ -600,7 +620,7 @@ class ConfigurationSetsApi(object):
                               request; this effectively ignores the authentication
                               in the spec for a single request.
         :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: Returns the result object, the HTTP status code, and the headers.
                  If the method is called asynchronously,
                  returns the request thread.
         :rtype: None
@@ -621,7 +641,8 @@ class ConfigurationSetsApi(object):
                 '_return_http_data_only',
                 '_preload_content',
                 '_request_timeout',
-                '_request_auth'
+                '_request_auth',
+                '_headers'
             ]
         )
 
@@ -698,7 +719,7 @@ class ConfigurationSetsApi(object):
         if 'user_id' in local_var_params and local_var_params['user_id'] is not None:  # noqa: E501
             query_params.append(('userId', local_var_params['user_id']))  # noqa: E501
 
-        header_params = {}
+        header_params = dict(local_var_params.get('_headers', {}))
 
         form_params = []
         local_var_files = {}
@@ -709,6 +730,11 @@ class ConfigurationSetsApi(object):
             ['text/plain', 'application/json', 'text/json'])  # noqa: E501
 
         header_params['Accept-Encoding'] = "gzip, deflate, br"
+
+
+        # set the LUSID header
+        header_params['X-LUSID-SDK-Language'] = 'Python'
+        header_params['X-LUSID-SDK-Version'] = '0.1.303'
 
         # Authentication setting
         auth_settings = ['oauth2']  # noqa: E501
@@ -801,7 +827,7 @@ class ConfigurationSetsApi(object):
                               request; this effectively ignores the authentication
                               in the spec for a single request.
         :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: Returns the result object, the HTTP status code, and the headers.
                  If the method is called asynchronously,
                  returns the request thread.
         :rtype: None
@@ -821,7 +847,8 @@ class ConfigurationSetsApi(object):
                 '_return_http_data_only',
                 '_preload_content',
                 '_request_timeout',
-                '_request_auth'
+                '_request_auth',
+                '_headers'
             ]
         )
 
@@ -884,7 +911,7 @@ class ConfigurationSetsApi(object):
         if 'user_id' in local_var_params and local_var_params['user_id'] is not None:  # noqa: E501
             query_params.append(('userId', local_var_params['user_id']))  # noqa: E501
 
-        header_params = {}
+        header_params = dict(local_var_params.get('_headers', {}))
 
         form_params = []
         local_var_files = {}
@@ -895,6 +922,11 @@ class ConfigurationSetsApi(object):
             ['text/plain', 'application/json', 'text/json'])  # noqa: E501
 
         header_params['Accept-Encoding'] = "gzip, deflate, br"
+
+
+        # set the LUSID header
+        header_params['X-LUSID-SDK-Language'] = 'Python'
+        header_params['X-LUSID-SDK-Version'] = '0.1.303'
 
         # Authentication setting
         auth_settings = ['oauth2']  # noqa: E501
@@ -975,10 +1007,10 @@ class ConfigurationSetsApi(object):
                               request; this effectively ignores the authentication
                               in the spec for a single request.
         :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: Returns the result object, the HTTP status code, and the headers.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(PersonalAccessToken, status_code(int), headers(HTTPHeaderDict))
+        :rtype: (PersonalAccessToken, int, HTTPHeaderDict)
         """
 
         local_var_params = locals()
@@ -992,7 +1024,8 @@ class ConfigurationSetsApi(object):
                 '_return_http_data_only',
                 '_preload_content',
                 '_request_timeout',
-                '_request_auth'
+                '_request_auth',
+                '_headers'
             ]
         )
 
@@ -1013,7 +1046,7 @@ class ConfigurationSetsApi(object):
         if 'action' in local_var_params and local_var_params['action'] is not None:  # noqa: E501
             query_params.append(('action', local_var_params['action']))  # noqa: E501
 
-        header_params = {}
+        header_params = dict(local_var_params.get('_headers', {}))
 
         form_params = []
         local_var_files = {}
@@ -1024,6 +1057,11 @@ class ConfigurationSetsApi(object):
             ['text/plain', 'application/json', 'text/json'])  # noqa: E501
 
         header_params['Accept-Encoding'] = "gzip, deflate, br"
+
+
+        # set the LUSID header
+        header_params['X-LUSID-SDK-Language'] = 'Python'
+        header_params['X-LUSID-SDK-Version'] = '0.1.303'
 
         # Authentication setting
         auth_settings = ['oauth2']  # noqa: E501
@@ -1127,10 +1165,10 @@ class ConfigurationSetsApi(object):
                               request; this effectively ignores the authentication
                               in the spec for a single request.
         :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: Returns the result object, the HTTP status code, and the headers.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(ConfigurationItem, status_code(int), headers(HTTPHeaderDict))
+        :rtype: (ConfigurationItem, int, HTTPHeaderDict)
         """
 
         local_var_params = locals()
@@ -1149,7 +1187,8 @@ class ConfigurationSetsApi(object):
                 '_return_http_data_only',
                 '_preload_content',
                 '_request_timeout',
-                '_request_auth'
+                '_request_auth',
+                '_headers'
             ]
         )
 
@@ -1228,7 +1267,7 @@ class ConfigurationSetsApi(object):
         if 'user_id' in local_var_params and local_var_params['user_id'] is not None:  # noqa: E501
             query_params.append(('userId', local_var_params['user_id']))  # noqa: E501
 
-        header_params = {}
+        header_params = dict(local_var_params.get('_headers', {}))
 
         form_params = []
         local_var_files = {}
@@ -1239,6 +1278,11 @@ class ConfigurationSetsApi(object):
             ['text/plain', 'application/json', 'text/json'])  # noqa: E501
 
         header_params['Accept-Encoding'] = "gzip, deflate, br"
+
+
+        # set the LUSID header
+        header_params['X-LUSID-SDK-Language'] = 'Python'
+        header_params['X-LUSID-SDK-Version'] = '0.1.303'
 
         # Authentication setting
         auth_settings = ['oauth2']  # noqa: E501
@@ -1339,10 +1383,10 @@ class ConfigurationSetsApi(object):
                               request; this effectively ignores the authentication
                               in the spec for a single request.
         :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: Returns the result object, the HTTP status code, and the headers.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(ConfigurationSet, status_code(int), headers(HTTPHeaderDict))
+        :rtype: (ConfigurationSet, int, HTTPHeaderDict)
         """
 
         local_var_params = locals()
@@ -1360,7 +1404,8 @@ class ConfigurationSetsApi(object):
                 '_return_http_data_only',
                 '_preload_content',
                 '_request_timeout',
-                '_request_auth'
+                '_request_auth',
+                '_headers'
             ]
         )
 
@@ -1425,7 +1470,7 @@ class ConfigurationSetsApi(object):
         if 'user_id' in local_var_params and local_var_params['user_id'] is not None:  # noqa: E501
             query_params.append(('userId', local_var_params['user_id']))  # noqa: E501
 
-        header_params = {}
+        header_params = dict(local_var_params.get('_headers', {}))
 
         form_params = []
         local_var_files = {}
@@ -1436,6 +1481,11 @@ class ConfigurationSetsApi(object):
             ['text/plain', 'application/json', 'text/json'])  # noqa: E501
 
         header_params['Accept-Encoding'] = "gzip, deflate, br"
+
+
+        # set the LUSID header
+        header_params['X-LUSID-SDK-Language'] = 'Python'
+        header_params['X-LUSID-SDK-Version'] = '0.1.303'
 
         # Authentication setting
         auth_settings = ['oauth2']  # noqa: E501
@@ -1528,10 +1578,10 @@ class ConfigurationSetsApi(object):
                               request; this effectively ignores the authentication
                               in the spec for a single request.
         :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: Returns the result object, the HTTP status code, and the headers.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(ResourceListOfConfigurationItem, status_code(int), headers(HTTPHeaderDict))
+        :rtype: (ResourceListOfConfigurationItem, int, HTTPHeaderDict)
         """
 
         local_var_params = locals()
@@ -1547,7 +1597,8 @@ class ConfigurationSetsApi(object):
                 '_return_http_data_only',
                 '_preload_content',
                 '_request_timeout',
-                '_request_auth'
+                '_request_auth',
+                '_headers'
             ]
         )
 
@@ -1596,7 +1647,7 @@ class ConfigurationSetsApi(object):
         if 'reveal' in local_var_params and local_var_params['reveal'] is not None:  # noqa: E501
             query_params.append(('reveal', local_var_params['reveal']))  # noqa: E501
 
-        header_params = {}
+        header_params = dict(local_var_params.get('_headers', {}))
 
         form_params = []
         local_var_files = {}
@@ -1607,6 +1658,11 @@ class ConfigurationSetsApi(object):
             ['text/plain', 'application/json', 'text/json'])  # noqa: E501
 
         header_params['Accept-Encoding'] = "gzip, deflate, br"
+
+
+        # set the LUSID header
+        header_params['X-LUSID-SDK-Language'] = 'Python'
+        header_params['X-LUSID-SDK-Version'] = '0.1.303'
 
         # Authentication setting
         auth_settings = ['oauth2']  # noqa: E501
@@ -1695,10 +1751,10 @@ class ConfigurationSetsApi(object):
                               request; this effectively ignores the authentication
                               in the spec for a single request.
         :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: Returns the result object, the HTTP status code, and the headers.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(ResourceListOfConfigurationSet, status_code(int), headers(HTTPHeaderDict))
+        :rtype: (ResourceListOfConfigurationSet, int, HTTPHeaderDict)
         """
 
         local_var_params = locals()
@@ -1713,7 +1769,8 @@ class ConfigurationSetsApi(object):
                 '_return_http_data_only',
                 '_preload_content',
                 '_request_timeout',
-                '_request_auth'
+                '_request_auth',
+                '_headers'
             ]
         )
 
@@ -1748,7 +1805,7 @@ class ConfigurationSetsApi(object):
         if 'reveal' in local_var_params and local_var_params['reveal'] is not None:  # noqa: E501
             query_params.append(('reveal', local_var_params['reveal']))  # noqa: E501
 
-        header_params = {}
+        header_params = dict(local_var_params.get('_headers', {}))
 
         form_params = []
         local_var_files = {}
@@ -1759,6 +1816,11 @@ class ConfigurationSetsApi(object):
             ['text/plain', 'application/json', 'text/json'])  # noqa: E501
 
         header_params['Accept-Encoding'] = "gzip, deflate, br"
+
+
+        # set the LUSID header
+        header_params['X-LUSID-SDK-Language'] = 'Python'
+        header_params['X-LUSID-SDK-Version'] = '0.1.303'
 
         # Authentication setting
         auth_settings = ['oauth2']  # noqa: E501
@@ -1847,10 +1909,10 @@ class ConfigurationSetsApi(object):
                               request; this effectively ignores the authentication
                               in the spec for a single request.
         :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: Returns the result object, the HTTP status code, and the headers.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(ResourceListOfConfigurationSetSummary, status_code(int), headers(HTTPHeaderDict))
+        :rtype: (ResourceListOfConfigurationSetSummary, int, HTTPHeaderDict)
         """
 
         local_var_params = locals()
@@ -1865,7 +1927,8 @@ class ConfigurationSetsApi(object):
                 '_return_http_data_only',
                 '_preload_content',
                 '_request_timeout',
-                '_request_auth'
+                '_request_auth',
+                '_headers'
             ]
         )
 
@@ -1896,7 +1959,7 @@ class ConfigurationSetsApi(object):
         if 'user_id' in local_var_params and local_var_params['user_id'] is not None:  # noqa: E501
             query_params.append(('userId', local_var_params['user_id']))  # noqa: E501
 
-        header_params = {}
+        header_params = dict(local_var_params.get('_headers', {}))
 
         form_params = []
         local_var_files = {}
@@ -1907,6 +1970,11 @@ class ConfigurationSetsApi(object):
             ['text/plain', 'application/json', 'text/json'])  # noqa: E501
 
         header_params['Accept-Encoding'] = "gzip, deflate, br"
+
+
+        # set the LUSID header
+        header_params['X-LUSID-SDK-Language'] = 'Python'
+        header_params['X-LUSID-SDK-Version'] = '0.1.303'
 
         # Authentication setting
         auth_settings = ['oauth2']  # noqa: E501
@@ -2010,10 +2078,10 @@ class ConfigurationSetsApi(object):
                               request; this effectively ignores the authentication
                               in the spec for a single request.
         :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: Returns the result object, the HTTP status code, and the headers.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(ConfigurationItem, status_code(int), headers(HTTPHeaderDict))
+        :rtype: (ConfigurationItem, int, HTTPHeaderDict)
         """
 
         local_var_params = locals()
@@ -2032,7 +2100,8 @@ class ConfigurationSetsApi(object):
                 '_return_http_data_only',
                 '_preload_content',
                 '_request_timeout',
-                '_request_auth'
+                '_request_auth',
+                '_headers'
             ]
         )
 
@@ -2113,7 +2182,7 @@ class ConfigurationSetsApi(object):
         if 'user_id' in local_var_params and local_var_params['user_id'] is not None:  # noqa: E501
             query_params.append(('userId', local_var_params['user_id']))  # noqa: E501
 
-        header_params = {}
+        header_params = dict(local_var_params.get('_headers', {}))
 
         form_params = []
         local_var_files = {}
@@ -2234,10 +2303,10 @@ class ConfigurationSetsApi(object):
                               request; this effectively ignores the authentication
                               in the spec for a single request.
         :type _request_auth: dict, optional
-        :return: Returns the result object.
+        :return: Returns the result object, the HTTP status code, and the headers.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(ConfigurationSet, status_code(int), headers(HTTPHeaderDict))
+        :rtype: (ConfigurationSet, int, HTTPHeaderDict)
         """
 
         local_var_params = locals()
@@ -2255,7 +2324,8 @@ class ConfigurationSetsApi(object):
                 '_return_http_data_only',
                 '_preload_content',
                 '_request_timeout',
-                '_request_auth'
+                '_request_auth',
+                '_headers'
             ]
         )
 
@@ -2322,7 +2392,7 @@ class ConfigurationSetsApi(object):
         if 'user_id' in local_var_params and local_var_params['user_id'] is not None:  # noqa: E501
             query_params.append(('userId', local_var_params['user_id']))  # noqa: E501
 
-        header_params = {}
+        header_params = dict(local_var_params.get('_headers', {}))
 
         form_params = []
         local_var_files = {}

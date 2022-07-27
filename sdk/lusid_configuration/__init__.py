@@ -53,3 +53,11 @@ from lusid_configuration.models.resource_list_of_configuration_set_summary impor
 from lusid_configuration.models.update_configuration_item import UpdateConfigurationItem
 from lusid_configuration.models.update_configuration_set import UpdateConfigurationSet
 
+# import utilities into sdk package
+from lusid_configuration.utilities.api_client_builder import ApiClientBuilder
+from lusid_configuration.utilities.api_configuration import ApiConfiguration
+from lusid_configuration.utilities.api_configuration_loader import ApiConfigurationLoader
+from lusid_configuration.utilities.refreshing_token import RefreshingToken
+
+# import tcp utilities
+from lusid_configuration.tcp.tcp_keep_alive_probes import TCPKeepAlivePoolManager, TCPKeepAliveProxyManager
