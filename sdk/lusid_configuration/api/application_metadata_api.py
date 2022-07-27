@@ -23,8 +23,6 @@ from lusid_configuration.exceptions import (  # noqa: F401
     ApiTypeError,
     ApiValueError
 )
-from lusid_configuration.models.lusid_problem_details import LusidProblemDetails
-from lusid_configuration.models.resource_list_of_access_controlled_resource import ResourceListOfAccessControlledResource
 
 
 class ApplicationMetadataApi(object):
@@ -94,10 +92,10 @@ class ApplicationMetadataApi(object):
                               request; this effectively ignores the authentication
                               in the spec for a single request.
         :type _request_auth: dict, optional
-        :return: Returns the result object, the HTTP status code, and the headers.
+        :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: (ResourceListOfAccessControlledResource, int, HTTPHeaderDict)
+        :rtype: tuple(ResourceListOfAccessControlledResource, status_code(int), headers(HTTPHeaderDict))
         """
 
         local_var_params = locals()
@@ -110,8 +108,7 @@ class ApplicationMetadataApi(object):
                 '_return_http_data_only',
                 '_preload_content',
                 '_request_timeout',
-                '_request_auth',
-                '_headers'
+                '_request_auth'
             ]
         )
 
@@ -130,7 +127,7 @@ class ApplicationMetadataApi(object):
 
         query_params = []
 
-        header_params = dict(local_var_params.get('_headers', {}))
+        header_params = {}
 
         form_params = []
         local_var_files = {}
@@ -141,11 +138,6 @@ class ApplicationMetadataApi(object):
             ['text/plain', 'application/json', 'text/json'])  # noqa: E501
 
         header_params['Accept-Encoding'] = "gzip, deflate, br"
-
-
-        # set the LUSID header
-        header_params['X-LUSID-SDK-Language'] = 'Python'
-        header_params['X-LUSID-SDK-Version'] = '0.1.303'
 
         # Authentication setting
         auth_settings = ['oauth2']  # noqa: E501
