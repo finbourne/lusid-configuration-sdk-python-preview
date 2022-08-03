@@ -15,7 +15,11 @@ class LusidConfigurationTests(unittest.TestCase):
         cls.logger = logging.getLogger()
         cls.logger.setLevel(logging.INFO)
 
-        cls.api_factory = ApiClientFactory(lusid_configuration, api_secrets_filename="secrets.json")
+        if os.getenv("FBN_ACCESS_TOKEN", None) is not None:
+            cls.api_factory = ApiClientFactory(lusid_configuration, token=os.environ.get("FBN_ACCESS_TOKEN"))
+        else:
+            cls.api_factory = ApiClientFactory(lusid_configuration, api_secrets_filename="secrets.json")
+
         cls.api = cls.api_factory.build(lusid_configuration.api.ConfigurationSetsApi)
 
     def test_get_types(self):
