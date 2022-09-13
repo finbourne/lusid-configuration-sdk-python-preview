@@ -5,6 +5,7 @@ All URIs are relative to *https://fbn-ci.lusid.com/configuration*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**add_configuration_to_set**](ConfigurationSetsApi.md#add_configuration_to_set) | **POST** /api/sets/{type}/{scope}/{code}/items | [EARLY ACCESS] AddConfigurationToSet: Add a configuration item to an existing set
+[**check_access_token_exists**](ConfigurationSetsApi.md#check_access_token_exists) | **HEAD** /api/sets/personal/me | [BETA] CheckAccessTokenExists: Check the Personal Access Token exists for the current user
 [**create_configuration_set**](ConfigurationSetsApi.md#create_configuration_set) | **POST** /api/sets | [EARLY ACCESS] CreateConfigurationSet: Create a configuration set
 [**delete_access_token**](ConfigurationSetsApi.md#delete_access_token) | **DELETE** /api/sets/personal/me | [EARLY ACCESS] DeleteAccessToken: Delete any stored Personal Access Token for the current user
 [**delete_configuration_item**](ConfigurationSetsApi.md#delete_configuration_item) | **DELETE** /api/sets/{type}/{scope}/{code}/items/{key} | [EARLY ACCESS] DeleteConfigurationItem: Remove the specified configuration item from the specified configuration set
@@ -97,6 +98,74 @@ Name | Type | Description  | Notes
 **201** | Success |  -  |
 **400** | The details of the input related failure |  -  |
 **404** | No configuration set exists with the provided identifiers |  -  |
+**0** | Error response |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **check_access_token_exists**
+> check_access_token_exists()
+
+[BETA] CheckAccessTokenExists: Check the Personal Access Token exists for the current user
+
+### Example
+
+* OAuth Authentication (oauth2):
+```python
+from __future__ import print_function
+import time
+import lusid_configuration
+from lusid_configuration.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://fbn-ci.lusid.com/configuration
+# See configuration.py for a list of all supported configuration parameters.
+configuration = lusid_configuration.Configuration(
+    host = "https://fbn-ci.lusid.com/configuration"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure OAuth2 access token for authorization: oauth2
+configuration = lusid_configuration.Configuration(
+    host = "https://fbn-ci.lusid.com/configuration"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with lusid_configuration.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = lusid_configuration.ConfigurationSetsApi(api_client)
+    
+    try:
+        # [BETA] CheckAccessTokenExists: Check the Personal Access Token exists for the current user
+        api_instance.check_access_token_exists()
+    except ApiException as e:
+        print("Exception when calling ConfigurationSetsApi->check_access_token_exists: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | The Personal Access Token exists |  -  |
+**404** | The Personal Access Token does not exist |  -  |
 **0** | Error response |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
