@@ -5,12 +5,12 @@ All URIs are relative to *https://fbn-ci.lusid.com/configuration*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**add_configuration_to_set**](ConfigurationSetsApi.md#add_configuration_to_set) | **POST** /api/sets/{type}/{scope}/{code}/items | [EARLY ACCESS] AddConfigurationToSet: Add a configuration item to an existing set
-[**check_access_token_exists**](ConfigurationSetsApi.md#check_access_token_exists) | **HEAD** /api/sets/personal/me | [BETA] CheckAccessTokenExists: Check the Personal Access Token exists for the current user
+[**check_access_token_exists**](ConfigurationSetsApi.md#check_access_token_exists) | **HEAD** /api/sets/personal/me | [DEPRECATED] CheckAccessTokenExists: Check the Personal Access Token exists for the current user
 [**create_configuration_set**](ConfigurationSetsApi.md#create_configuration_set) | **POST** /api/sets | [EARLY ACCESS] CreateConfigurationSet: Create a configuration set
-[**delete_access_token**](ConfigurationSetsApi.md#delete_access_token) | **DELETE** /api/sets/personal/me | [EARLY ACCESS] DeleteAccessToken: Delete any stored Personal Access Token for the current user
+[**delete_access_token**](ConfigurationSetsApi.md#delete_access_token) | **DELETE** /api/sets/personal/me | [DEPRECATED] DeleteAccessToken: Delete any stored Personal Access Token for the current user
 [**delete_configuration_item**](ConfigurationSetsApi.md#delete_configuration_item) | **DELETE** /api/sets/{type}/{scope}/{code}/items/{key} | [EARLY ACCESS] DeleteConfigurationItem: Remove the specified configuration item from the specified configuration set
 [**delete_configuration_set**](ConfigurationSetsApi.md#delete_configuration_set) | **DELETE** /api/sets/{type}/{scope}/{code} | [EARLY ACCESS] DeleteConfigurationSet: Deletes a configuration set along with all their configuration items
-[**generate_access_token**](ConfigurationSetsApi.md#generate_access_token) | **PUT** /api/sets/personal/me | [EARLY ACCESS] GenerateAccessToken: Generate a Personal Access Token for the current user and stores it in the me token
+[**generate_access_token**](ConfigurationSetsApi.md#generate_access_token) | **PUT** /api/sets/personal/me | [DEPRECATED] GenerateAccessToken: Generate a Personal Access Token for the current user and stores it in the me token
 [**get_configuration_item**](ConfigurationSetsApi.md#get_configuration_item) | **GET** /api/sets/{type}/{scope}/{code}/items/{key} | [EARLY ACCESS] GetConfigurationItem: Get the specific configuration item within an existing set
 [**get_configuration_set**](ConfigurationSetsApi.md#get_configuration_set) | **GET** /api/sets/{type}/{scope}/{code} | [EARLY ACCESS] GetConfigurationSet: Get a configuration set, including all the associated metadata. By default secrets will not be revealed
 [**get_system_configuration_items**](ConfigurationSetsApi.md#get_system_configuration_items) | **GET** /api/sets/system/{code}/items/{key} | [EARLY ACCESS] GetSystemConfigurationItems: Get the specific system configuration items within a system set  All users have access to this endpoint
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 # **check_access_token_exists**
 > check_access_token_exists()
 
-[BETA] CheckAccessTokenExists: Check the Personal Access Token exists for the current user
+[DEPRECATED] CheckAccessTokenExists: Check the Personal Access Token exists for the current user
 
 ### Example
 
@@ -139,7 +139,7 @@ with lusid_configuration.ApiClient(configuration) as api_client:
     api_instance = lusid_configuration.ConfigurationSetsApi(api_client)
     
     try:
-        # [BETA] CheckAccessTokenExists: Check the Personal Access Token exists for the current user
+        # [DEPRECATED] CheckAccessTokenExists: Check the Personal Access Token exists for the current user
         api_instance.check_access_token_exists()
     except ApiException as e:
         print("Exception when calling ConfigurationSetsApi->check_access_token_exists: %s\n" % e)
@@ -248,7 +248,7 @@ Name | Type | Description  | Notes
 # **delete_access_token**
 > delete_access_token()
 
-[EARLY ACCESS] DeleteAccessToken: Delete any stored Personal Access Token for the current user
+[DEPRECATED] DeleteAccessToken: Delete any stored Personal Access Token for the current user
 
 ### Example
 
@@ -282,7 +282,7 @@ with lusid_configuration.ApiClient(configuration) as api_client:
     api_instance = lusid_configuration.ConfigurationSetsApi(api_client)
     
     try:
-        # [EARLY ACCESS] DeleteAccessToken: Delete any stored Personal Access Token for the current user
+        # [DEPRECATED] DeleteAccessToken: Delete any stored Personal Access Token for the current user
         api_instance.delete_access_token()
     except ApiException as e:
         print("Exception when calling ConfigurationSetsApi->delete_access_token: %s\n" % e)
@@ -475,7 +475,7 @@ void (empty response body)
 # **generate_access_token**
 > PersonalAccessToken generate_access_token(action=action)
 
-[EARLY ACCESS] GenerateAccessToken: Generate a Personal Access Token for the current user and stores it in the me token
+[DEPRECATED] GenerateAccessToken: Generate a Personal Access Token for the current user and stores it in the me token
 
 ### Example
 
@@ -510,7 +510,7 @@ with lusid_configuration.ApiClient(configuration) as api_client:
     action = 'action_example' # str | action=regenerate = Even if an existing parameter exists, forcibly regenerate a new one (deleting the old)  action=ensure = If no parameter exists, create one. If one does already exist, verify that it is still valid (call a service?), and if so, return it. If it is not still valid, then regenerate a new one.  action=default = If a parameter exists, return it. If not then create one. If this parameter is not provided, this is the default behaviour. (optional)
 
     try:
-        # [EARLY ACCESS] GenerateAccessToken: Generate a Personal Access Token for the current user and stores it in the me token
+        # [DEPRECATED] GenerateAccessToken: Generate a Personal Access Token for the current user and stores it in the me token
         api_response = api_instance.generate_access_token(action=action)
         pprint(api_response)
     except ApiException as e:
