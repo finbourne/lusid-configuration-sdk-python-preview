@@ -58,7 +58,7 @@ with lusid_configuration.ApiClient(configuration) as api_client:
     type = 'type_example' # str | Whether the configuration set is Personal or Shared
 scope = 'scope_example' # str | The scope that identifies a configuration set
 code = 'code_example' # str | The code that identifies a configuration set
-create_configuration_item = {"key":"password","value":"a super secret password","valueType":"text","isSecret":false,"description":"Password for System A"} # CreateConfigurationItem | The data to create a configuration item
+create_configuration_item = {"key":"password","value":"a super secret password","valueType":"text","isSecret":false,"description":"Password for System A","blockReveal":false} # CreateConfigurationItem | The data to create a configuration item
 user_id = 'user_id_example' # str | Feature that allows Administrators to administer personal settings  (but never reveal the value of secrets) of a specific user. (optional)
 
     try:

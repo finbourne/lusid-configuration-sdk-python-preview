@@ -8,7 +8,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "0.1.542",
+    "version": "0.1.543",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -289,7 +289,8 @@
                       "value": "a super secret password",
                       "valueType": "text",
                       "isSecret": true,
-                      "ref": "config://shared/official/system-a-config/password"
+                      "ref": "config://shared/official/system-a-config/password",
+                      "blockReveal": false
                     }
                   ],
                   "id": {
@@ -315,7 +316,8 @@
                       "value": "a super secret password",
                       "valueType": "text",
                       "isSecret": true,
-                      "ref": "config://shared/official/system-a-config/password"
+                      "ref": "config://shared/official/system-a-config/password",
+                      "blockReveal": false
                     }
                   ],
                   "id": {
@@ -341,7 +343,8 @@
                       "value": "a super secret password",
                       "valueType": "text",
                       "isSecret": true,
-                      "ref": "config://shared/official/system-a-config/password"
+                      "ref": "config://shared/official/system-a-config/password",
+                      "blockReveal": false
                     }
                   ],
                   "id": {
@@ -598,7 +601,8 @@
                           "value": "a super secret password",
                           "valueType": "text",
                           "isSecret": true,
-                          "ref": "config://shared/system/system-config-set-a/password"
+                          "ref": "config://shared/system/system-config-set-a/password",
+                          "blockReveal": false
                         }
                       ],
                       "id": {
@@ -619,7 +623,8 @@
                           "value": "a super secret password",
                           "valueType": "text",
                           "isSecret": true,
-                          "ref": "config://personal//system/system-config-set-a/password"
+                          "ref": "config://personal//system/system-config-set-a/password",
+                          "blockReveal": false
                         }
                       ],
                       "id": {
@@ -650,7 +655,8 @@
                           "value": "a super secret password",
                           "valueType": "text",
                           "isSecret": true,
-                          "ref": "config://shared/system/system-config-set-a/password"
+                          "ref": "config://shared/system/system-config-set-a/password",
+                          "blockReveal": false
                         }
                       ],
                       "id": {
@@ -671,7 +677,8 @@
                           "value": "a super secret password",
                           "valueType": "text",
                           "isSecret": true,
-                          "ref": "config://personal//system/system-config-set-a/password"
+                          "ref": "config://personal//system/system-config-set-a/password",
+                          "blockReveal": false
                         }
                       ],
                       "id": {
@@ -702,7 +709,8 @@
                           "value": "a super secret password",
                           "valueType": "text",
                           "isSecret": true,
-                          "ref": "config://shared/system/system-config-set-a/password"
+                          "ref": "config://shared/system/system-config-set-a/password",
+                          "blockReveal": false
                         }
                       ],
                       "id": {
@@ -723,7 +731,8 @@
                           "value": "a super secret password",
                           "valueType": "text",
                           "isSecret": true,
-                          "ref": "config://personal//system/system-config-set-a/password"
+                          "ref": "config://personal//system/system-config-set-a/password",
+                          "blockReveal": false
                         }
                       ],
                       "id": {
@@ -859,7 +868,8 @@
                       "value": "a super secret password",
                       "valueType": "text",
                       "isSecret": true,
-                      "ref": "config://shared/system/system-config-item-a/password"
+                      "ref": "config://shared/system/system-config-item-a/password",
+                      "blockReveal": false
                     },
                     {
                       "createdAt": "0001-01-01T00:00:00.0000000+00:00",
@@ -871,7 +881,8 @@
                       "value": "a super secret password",
                       "valueType": "text",
                       "isSecret": true,
-                      "ref": "config://personal//system/system-config-item-a/password"
+                      "ref": "config://personal//system/system-config-item-a/password",
+                      "blockReveal": false
                     }
                   ],
                   "links": []
@@ -893,7 +904,8 @@
                       "value": "a super secret password",
                       "valueType": "text",
                       "isSecret": true,
-                      "ref": "config://shared/system/system-config-item-a/password"
+                      "ref": "config://shared/system/system-config-item-a/password",
+                      "blockReveal": false
                     },
                     {
                       "createdAt": "0001-01-01T00:00:00.0000000+00:00",
@@ -905,7 +917,8 @@
                       "value": "a super secret password",
                       "valueType": "text",
                       "isSecret": true,
-                      "ref": "config://personal//system/system-config-item-a/password"
+                      "ref": "config://personal//system/system-config-item-a/password",
+                      "blockReveal": false
                     }
                   ],
                   "links": []
@@ -927,7 +940,8 @@
                       "value": "a super secret password",
                       "valueType": "text",
                       "isSecret": true,
-                      "ref": "config://shared/system/system-config-item-a/password"
+                      "ref": "config://shared/system/system-config-item-a/password",
+                      "blockReveal": false
                     },
                     {
                       "createdAt": "0001-01-01T00:00:00.0000000+00:00",
@@ -939,7 +953,8 @@
                       "value": "a super secret password",
                       "valueType": "text",
                       "isSecret": true,
-                      "ref": "config://personal//system/system-config-item-a/password"
+                      "ref": "config://personal//system/system-config-item-a/password",
+                      "blockReveal": false
                     }
                   ],
                   "links": []
@@ -1088,7 +1103,8 @@
                       "value": "a super secret password",
                       "valueType": "text",
                       "isSecret": true,
-                      "ref": "config://shared/official/system-a-config/password"
+                      "ref": "config://shared/official/system-a-config/password",
+                      "blockReveal": false
                     }
                   ],
                   "id": {
@@ -1114,7 +1130,8 @@
                       "value": "a super secret password",
                       "valueType": "text",
                       "isSecret": true,
-                      "ref": "config://shared/official/system-a-config/password"
+                      "ref": "config://shared/official/system-a-config/password",
+                      "blockReveal": false
                     }
                   ],
                   "id": {
@@ -1140,7 +1157,8 @@
                       "value": "a super secret password",
                       "valueType": "text",
                       "isSecret": true,
-                      "ref": "config://shared/official/system-a-config/password"
+                      "ref": "config://shared/official/system-a-config/password",
+                      "blockReveal": false
                     }
                   ],
                   "id": {
@@ -1320,7 +1338,8 @@
                       "value": "a super secret password",
                       "valueType": "text",
                       "isSecret": true,
-                      "ref": "config://shared/official/system-a-config/password"
+                      "ref": "config://shared/official/system-a-config/password",
+                      "blockReveal": false
                     }
                   ],
                   "id": {
@@ -1346,7 +1365,8 @@
                       "value": "a super secret password",
                       "valueType": "text",
                       "isSecret": true,
-                      "ref": "config://shared/official/system-a-config/password"
+                      "ref": "config://shared/official/system-a-config/password",
+                      "blockReveal": false
                     }
                   ],
                   "id": {
@@ -1372,7 +1392,8 @@
                       "value": "a super secret password",
                       "valueType": "text",
                       "isSecret": true,
-                      "ref": "config://shared/official/system-a-config/password"
+                      "ref": "config://shared/official/system-a-config/password",
+                      "blockReveal": false
                     }
                   ],
                   "id": {
@@ -1622,7 +1643,8 @@
                 "value": "a super secret password",
                 "valueType": "text",
                 "isSecret": false,
-                "description": "Password for System A"
+                "description": "Password for System A",
+                "blockReveal": false
               }
             },
             "application/json": {
@@ -1634,7 +1656,8 @@
                 "value": "a super secret password",
                 "valueType": "text",
                 "isSecret": false,
-                "description": "Password for System A"
+                "description": "Password for System A",
+                "blockReveal": false
               }
             },
             "text/json": {
@@ -1646,7 +1669,8 @@
                 "value": "a super secret password",
                 "valueType": "text",
                 "isSecret": false,
-                "description": "Password for System A"
+                "description": "Password for System A",
+                "blockReveal": false
               }
             },
             "application/*+json": {
@@ -1658,7 +1682,8 @@
                 "value": "a super secret password",
                 "valueType": "text",
                 "isSecret": false,
-                "description": "Password for System A"
+                "description": "Password for System A",
+                "blockReveal": false
               }
             }
           },
@@ -1684,7 +1709,8 @@
                       "value": "a super secret password",
                       "valueType": "text",
                       "isSecret": true,
-                      "ref": "config://shared/official/system-a-config/password"
+                      "ref": "config://shared/official/system-a-config/password",
+                      "blockReveal": false
                     }
                   ],
                   "id": {
@@ -1710,7 +1736,8 @@
                       "value": "a super secret password",
                       "valueType": "text",
                       "isSecret": true,
-                      "ref": "config://shared/official/system-a-config/password"
+                      "ref": "config://shared/official/system-a-config/password",
+                      "blockReveal": false
                     }
                   ],
                   "id": {
@@ -1736,7 +1763,8 @@
                       "value": "a super secret password",
                       "valueType": "text",
                       "isSecret": true,
-                      "ref": "config://shared/official/system-a-config/password"
+                      "ref": "config://shared/official/system-a-config/password",
+                      "blockReveal": false
                     }
                   ],
                   "id": {
@@ -1899,7 +1927,8 @@
                   "value": "Password for System A",
                   "valueType": "text",
                   "isSecret": true,
-                  "ref": "config://shared/official/system-a-config/password"
+                  "ref": "config://shared/official/system-a-config/password",
+                  "blockReveal": false
                 }
               },
               "application/json": {
@@ -1916,7 +1945,8 @@
                   "value": "Password for System A",
                   "valueType": "text",
                   "isSecret": true,
-                  "ref": "config://shared/official/system-a-config/password"
+                  "ref": "config://shared/official/system-a-config/password",
+                  "blockReveal": false
                 }
               },
               "text/json": {
@@ -1933,7 +1963,8 @@
                   "value": "Password for System A",
                   "valueType": "text",
                   "isSecret": true,
-                  "ref": "config://shared/official/system-a-config/password"
+                  "ref": "config://shared/official/system-a-config/password",
+                  "blockReveal": false
                 }
               }
             }
@@ -2120,7 +2151,8 @@
                   "value": "Password for System A",
                   "valueType": "text",
                   "isSecret": true,
-                  "ref": "config://shared/official/system-a-config/password"
+                  "ref": "config://shared/official/system-a-config/password",
+                  "blockReveal": false
                 }
               },
               "application/json": {
@@ -2137,7 +2169,8 @@
                   "value": "Password for System A",
                   "valueType": "text",
                   "isSecret": true,
-                  "ref": "config://shared/official/system-a-config/password"
+                  "ref": "config://shared/official/system-a-config/password",
+                  "blockReveal": false
                 }
               },
               "text/json": {
@@ -2154,7 +2187,8 @@
                   "value": "Password for System A",
                   "valueType": "text",
                   "isSecret": true,
-                  "ref": "config://shared/official/system-a-config/password"
+                  "ref": "config://shared/official/system-a-config/password",
+                  "blockReveal": false
                 }
               }
             }
@@ -2448,6 +2482,7 @@
       },
       "ConfigurationItem": {
         "required": [
+          "blockReveal",
           "createdAt",
           "createdBy",
           "isSecret",
@@ -2510,6 +2545,10 @@
             "description": "The reference to the configuration item",
             "readOnly": true
           },
+          "blockReveal": {
+            "type": "boolean",
+            "description": "Defines whether the value is blocked with non-internal request."
+          },
           "links": {
             "type": "array",
             "items": {
@@ -2523,6 +2562,7 @@
       },
       "ConfigurationItemSummary": {
         "required": [
+          "blockReveal",
           "isSecret",
           "key",
           "ref",
@@ -2555,6 +2595,10 @@
             "type": "string",
             "description": "The reference to the configuration item",
             "readOnly": true
+          },
+          "blockReveal": {
+            "type": "boolean",
+            "description": "Defines whether the value is blocked with non-internal request."
           },
           "links": {
             "type": "array",
@@ -2693,6 +2737,10 @@
             "type": "string",
             "description": "The description of the new configuration item",
             "nullable": true
+          },
+          "blockReveal": {
+            "type": "boolean",
+            "description": "A property to indicate if revealing the value is blocked."
           }
         },
         "additionalProperties": false,
