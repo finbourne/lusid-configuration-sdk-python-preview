@@ -8,7 +8,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "0.1.543",
+    "version": "0.1.544",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -554,7 +554,7 @@
         "tags": [
           "ConfigurationSets"
         ],
-        "summary": "[EARLY ACCESS] GetSystemConfigurationSets: Get the specified system configuration sets, including all their associated metadata. By default secrets will not be revealed\r\nAll users have access to this endpoint",
+        "summary": "GetSystemConfigurationSets: Get the specified system configuration sets, including all their associated metadata. By default secrets will not be revealed\r\nAll users have access to this endpoint",
         "operationId": "GetSystemConfigurationSets",
         "parameters": [
           {
@@ -803,7 +803,7 @@
             "oauth2": []
           }
         ],
-        "x-fbn-apistatus": "EarlyAccess"
+        "x-fbn-apistatus": "Stable"
       }
     },
     "/api/sets/system/{code}/items/{key}": {
@@ -1026,7 +1026,7 @@
         "tags": [
           "ConfigurationSets"
         ],
-        "summary": "[EARLY ACCESS] GetConfigurationSet: Get a configuration set, including all the associated metadata. By default secrets will not be revealed",
+        "summary": "GetConfigurationSet: Get a configuration set, including all the associated metadata. By default secrets will not be revealed",
         "operationId": "GetConfigurationSet",
         "parameters": [
           {
@@ -1226,7 +1226,7 @@
             "oauth2": []
           }
         ],
-        "x-fbn-apistatus": "EarlyAccess"
+        "x-fbn-apistatus": "Stable"
       },
       "put": {
         "tags": [
@@ -1840,7 +1840,7 @@
         "tags": [
           "ConfigurationSets"
         ],
-        "summary": "[EARLY ACCESS] GetConfigurationItem: Get the specific configuration item within an existing set",
+        "summary": "GetConfigurationItem: Get the specific configuration item within an existing set",
         "operationId": "GetConfigurationItem",
         "parameters": [
           {
@@ -2025,7 +2025,7 @@
             "oauth2": []
           }
         ],
-        "x-fbn-apistatus": "EarlyAccess"
+        "x-fbn-apistatus": "Stable"
       },
       "put": {
         "tags": [
