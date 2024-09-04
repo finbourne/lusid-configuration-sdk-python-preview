@@ -8,7 +8,7 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "0.1.546",
+    "version": "0.1.548",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
@@ -2100,7 +2100,8 @@
               },
               "example": {
                 "value": "updated password",
-                "description": "Password for system A and B"
+                "description": "Password for system A and B",
+                "blockReveal": false
               }
             },
             "application/json": {
@@ -2109,7 +2110,8 @@
               },
               "example": {
                 "value": "updated password",
-                "description": "Password for system A and B"
+                "description": "Password for system A and B",
+                "blockReveal": false
               }
             },
             "text/json": {
@@ -2118,7 +2120,8 @@
               },
               "example": {
                 "value": "updated password",
-                "description": "Password for system A and B"
+                "description": "Password for system A and B",
+                "blockReveal": false
               }
             },
             "application/*+json": {
@@ -2127,7 +2130,8 @@
               },
               "example": {
                 "value": "updated password",
-                "description": "Password for system A and B"
+                "description": "Password for system A and B",
+                "blockReveal": false
               }
             }
           },
@@ -3206,6 +3210,10 @@
             "type": "string",
             "description": "The new description of the configuration item",
             "nullable": true
+          },
+          "blockReveal": {
+            "type": "boolean",
+            "description": "The requested new state of BlockReveal"
           }
         },
         "additionalProperties": false,
