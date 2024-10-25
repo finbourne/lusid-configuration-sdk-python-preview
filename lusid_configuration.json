@@ -9,11 +9,33 @@
       "url": "https://www.finbourne.com",
       "email": "info@finbourne.com"
     },
-    "version": "0.1.557",
+    "version": "0.1.559",
     "x-logo": {
       "url": "https://www.lusid.com/app/assets/logo_white.png",
       "backgroundColor": "#415464"
-    }
+    },
+    "x-fbn-error-codes": {
+      "-1": {
+        "title": "Unknown error",
+        "description": "An unexpected error was encountered on our side."
+      },
+      "144": {
+        "title": "Duplicate In Parameter Set"
+      },
+      "151": {
+        "title": "Invalid Parameter Value"
+      },
+      "689": {
+        "title": "The supplied pagination token is invalid"
+      },
+      "692": {
+        "title": "This endpoint does not support impersonation"
+      },
+      "871": {
+        "title": "The specified impersonated user does not exist"
+      }
+    },
+    "x-fbn-description": "The Configuration Store serves as a central repository for securely storing and managing LUSID secrets and parameters, enabling seamless integration and secure secret sharing within a LUSID environment."
   },
   "servers": [
     {
